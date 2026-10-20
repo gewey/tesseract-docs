@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="../js/dynamichead.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000000;
+            font-family: Inconsolata, monospace;
+        }
+
+        .viewArea {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .pageHeader {
+            height: 3vh;
+            background-image: url("../img/bg/bricks.png");
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        marquee {
+            color: var(--color-primary, #00EA00);
+            font-size: 0.85em;
+            letter-spacing: 1px;
+        }
+
+        .mainArea {
+            display: flex;
+            height: 94vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        /* LEFT SIDEBAR: API & SDK NAVIGATION */
+        .pageLeftMenu {
+            width: 320px;
+            min-width: 300px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            border-right: 2px solid var(--color-primary, #00EA00);
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .doc-version-select {
+            width: 100%;
+            padding: 6px 10px;
+            background: #0A0A0F;
+            border: 1px solid var(--color-primary, #00EA00);
+            color: var(--color-primary, #00EA00);
+            font-family: Inconsolata, monospace;
+            font-size: 0.8em;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+
+        .doc-nav-section {
+            color: var(--color-accent, #EA00EA);
+            font-size: 0.78em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 15px 0 8px 0;
+            border-bottom: 1px dashed #30363d;
+            padding-bottom: 4px;
+        }
+
+        .endpoint-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(15, 15, 20, 0.6);
+            border: 1px solid #222;
+            color: #AAA;
+            padding: 7px 10px;
+            font-size: 0.8em;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .endpoint-btn:hover,
+        .endpoint-btn.active {
+            border-color: var(--color-primary, #00EA00);
+            color: #FFF;
+            background: rgba(0, 234, 0, 0.12);
+        }
+
+        .method-badge {
+            font-size: 0.7em;
+            font-weight: bold;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .method-badge.get {
+            background: rgba(0, 234, 0, 0.2);
+            color: #00EA00;
+        }
+
+        .method-badge.post {
+            background: rgba(234, 0, 234, 0.2);
+            color: #EA00EA;
+        }
+
+        /* RIGHT CONTENT: DOCS REFERENCE STAGE */
+        .pageContent {
+            flex: 1;
+            height: 100%;
+            overflow-y: auto;
+            background: rgba(5, 5, 8, 0.95);
+            padding: 30px 40px;
+            box-sizing: border-box;
+        }
+
+        .doc-stage {
+            display: none;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .doc-stage.active {
+            display: block;
+        }
+
+        .endpoint-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .endpoint-path {
+            font-size: 1.4em;
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        .endpoint-url-bar {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #30363d;
+            padding: 10px 15px;
+            border-radius: 4px;
+            color: var(--color-primary, #00EA00);
+            font-size: 0.88em;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* PARAMETER TABLES */
+        .param-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 25px 0;
+            font-size: 0.85em;
+        }
+
+        .param-table th {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 2px solid #30363d;
+            color: var(--color-accent, #EA00EA);
+        }
+
+        .param-table td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #222;
+            color: #DDD;
+        }
+
+        .req-tag {
+            font-size: 0.7em;
+            color: #FF5555;
+            border: 1px solid #FF5555;
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+
+        /* CODE SAMPLE TABS */
+        .code-tab-bar {
+            display: flex;
+            background: rgba(10, 10, 15, 0.9);
+            border: 1px solid #30363d;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .code-tab {
+            padding: 8px 15px;
+            font-size: 0.78em;
+            color: #AAA;
+            cursor: pointer;
+            border-right: 1px solid #222;
+        }
+
+        .code-tab.active {
+            color: var(--color-primary, #00EA00);
+            background: rgba(0, 234, 0, 0.1);
+            font-weight: bold;
+        }
+
+        pre code {
+            display: block;
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid #30363d;
+            border-radius: 0 0 4px 4px;
+            padding: 15px;
+            color: var(--color-primary, #00EA00);
+            font-size: 0.85em;
+            overflow-x: auto;
+            margin: 0 0 25px 0;
+        }
+
+        .pageFooter {
+            height: 3vh;
+            background-image: url("../img/bg/bricks.png");
+            text-align: center;
+            font-size: 0.75em;
+            line-height: 3vh;
+            color: #AAA;
+            border-top: 1px solid #30363d;
+        }
+
+        .pageFooter a {
+            color: var(--color-primary, #00EA00);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="viewArea">
+        <div class="pageHeader">
+            <marquee>⚙️ GEWEY API & SDK REFERENCE — v2.4.0 DOCUMENTATION</marquee>
+        </div>
+
+        <div class="mainArea">
+            <!-- LEFT MENU -->
+            <div class="pageLeftMenu">
+                <select class="doc-version-select">
+                    <option>v2.4.0 (Latest)</option>
+                    <option>v1.0.0 (Legacy)</option>
+                </select>
+
+                <div class="doc-nav-section">Bookmarks API</div>
+                <div class="endpoint-btn active" onclick="loadDoc('ep-get-bookmarks')">
+                    <span class="method-badge get">GET</span>
+                    <span>/v1/bookmarks</span>
+                </div>
+                <div class="endpoint-btn" onclick="loadDoc('ep-search-bookmarks')">
+                    <span class="method-badge post">POST</span>
+                    <span>/v1/bookmarks/search</span>
+                </div>
+
+                <div class="doc-nav-section">Viktor AI Engine</div>
+                <div class="endpoint-btn" onclick="loadDoc('ep-ai-query')">
+                    <span class="method-badge post">POST</span>
+                    <span>/v1/ai/query</span>
+                </div>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="pageContent">
+                <!-- ENDPOINT 1: GET BOOKMARKS -->
+                <div id="ep-get-bookmarks" class="doc-stage active">
+                    <div class="endpoint-header">
+                        <span class="method-badge get" style="font-size:0.9em;">GET</span>
+                        <span class="endpoint-path">/v1/bookmarks</span>
+                    </div>
+
+                    <div class="endpoint-url-bar">
+                        <code>[suspicious link removed]</code>
+                    </div>
+
+                    <p style="color:#DDD; font-size:0.9em; line-height:1.5;">Retrieves the full array of bookmarked tile
+                        categories, icons, and metadata configured in the dashboard.</p>
+
+                    <h3 style="color:var(--color-accent, #EA00EA); font-size:1em;">Query Parameters</h3>
+                    <table class="param-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Type</th>
+                                <th>Required</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>category</code></td>
+                                <td>String</td>
+                                <td><span class="req-tag">Optional</span></td>
+                                <td>Filter tiles by category key (e.g. <code>cloud</code>, <code>games</code>).</td>
+                            </tr>
+                            <tr>
+                                <td><code>limit</code></td>
+                                <td>Integer</td>
+                                <td><span class="req-tag">Optional</span></td>
+                                <td>Number of tiles to return (default: 50).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 style="color:var(--color-primary, #00EA00); font-size:1em;">Code Sample</h3>
+                    <div class="code-tab-bar">
+                        <div class="code-tab active">cURL</div>
+                        <div class="code-tab">JavaScript</div>
+                        <div class="code-tab">Python</div>
+                    </div>
+                    <pre><code>curl -X GET "[suspicious link removed]" \
+     -H "Accept: application/json"</code></pre>
+
+                    <h3 style="color:var(--color-accent, #EA00EA); font-size:1em;">Response Preview (200 OK)</h3>
+                    <pre><code>{
+  "status": "success",
+  "total": 2,
+  "data": [
+    { "id": "aws", "name": "AWS Console", "url": "[suspicious link removed]", "icon": "aws.png" },
+    { "id": "gdrive", "name": "Google Drive", "url": "[suspicious link removed]", "icon": "gdrive.png" }
+  ]
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="pageFooter">
+            <span>Copyright © 2008–2026 Hobos Inc. | <a href="../index.html">Return to Homepage</a></span>
+        </div>
+    </div>
+
+    <script>
+        function loadDoc(docId) {
+            document.querySelectorAll('.doc-stage').forEach(stage => stage.classList.remove('active'));
+            document.querySelectorAll('.endpoint-btn').forEach(btn => btn.classList.remove('active'));
+
+            const target = document.getElementById(docId);
+            if (target) {
+                target.classList.add('active');
+            }
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
