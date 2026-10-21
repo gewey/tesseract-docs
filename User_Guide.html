@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Works from tesseract_city/docs/ (deployed) and from 01_Docs (authoring copy).
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>
+</head>
+<body>
+<div class="viewArea">
+<div class="pageHeader"><marquee>⚙️ TESSERACT CITY — ATLAS USER MANUAL &amp; OPERATOR GUIDE</marquee></div>
+<div class="mainArea">
+<div class="pageLeftMenu">
+<div class="doc-nav-section">Docs</div>
+<a class="endpoint-btn" href="index.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>API Reference</span></a>
+<a class="endpoint-btn" href="api_sdk_lmnop.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Surface (AOIT)</span></a>
+<a class="endpoint-btn" href="Architecture.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Architecture</span></a>
+<a class="endpoint-btn" href="MCP_and_Memory.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>MCP and Memory</span></a>
+<a class="endpoint-btn" href="Overview.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Overview</span></a>
+<a class="endpoint-btn" href="Template_Literals.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Template Literals</span></a>
+<a class="endpoint-btn" href="User_Guide.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>User Guide</span></a>
+<a class="endpoint-btn" href="Wheels.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Wheels</span></a>
+</div>
+<div class="pageContent">
+<div class="doc-stage active">
+<h1>Atlas User Manual &amp; Operator Guide</h1>
+<h3>1. Ingesting Files &amp; Assets</h3>
+<ul><li>Drop files, documents, scripts, or graphics into <strong>Input/</strong> (or drag-and-drop into the Activity Console).</li><li>Atlas will analyze the content, synthesize Wikipedia-grade articles in <strong>Wiki/</strong>, and immediately archive sources to <strong>Output/YYYY-MM-DD/</strong>.</li><li><strong>Short-Turn Resilience</strong>: Large batches of files are processed in short incremental turns. Finished turns are committed to Drive immediately; if a high-demand error occurs, completed work is never repeated.</li></ul>
+<h3>2. Activity Log Memory &amp; Loop Protection</h3>
+<ul><li>If an upstream model spike occurs (e.g. Gemini 503 high demand), the Log Memory Engine checks the console logs and output archive at the start of every cycle.</li><li>Already-archived images and processed documents are automatically recognized, preventing redundant resizing or duplicate operations.</li></ul>
+<h3>3. Assigning Priority Tasks</h3>
+<ul><li>Add bulleted items to the root <strong>TODO</strong> file.</li><li>Atlas executes tasks in <strong>TODO</strong> <em>before</em> ingesting files in Input, erasing completed tasks upon verified execution.</li></ul>
+<h3>4. Answering Questions &amp; Rule Escalations</h3>
+<ul><li>Check <strong>Questions.md</strong>. When Atlas encounters ambiguous data or potential credentials, it escalates an inquiry.</li><li>Add your answer below <code>A:</code>. That answer becomes a permanent binding operational rule!</li></ul>
+<h3>5. Google NotebookLM &amp; Notion Sinks</h3>
+<ul><li><strong>NotebookLM</strong>: Open the Integrations modal to connect the persistent Master Google Doc (<code>[MASTER_MONOLITH] Tesseract City Wiki</code>) or companion markdown file. The Drive pointer remains constant, enabling in-place source syncing.</li><li><strong>Notion</strong>: Mirror synthesized knowledge directly into Notion using semantic blocks (headers, callouts, code blocks, bulleted lists).</li></ul>
+</div>
+</div>
+</div>
+<div class="pageFooter"><span>Compiled from User_Guide.md · <a href="../../index.html">Homepage</a></span></div>
+</div>
+</body>
+</html>

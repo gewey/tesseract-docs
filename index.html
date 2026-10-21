@@ -2,7 +2,20 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript" src="../../js/dynamichead.js"></script>
+    <script>
+        // Loads the site head from tesseract_city/docs/ when deployed, and falls
+        // back to the live site when this file is opened from 01_Docs directly.
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>
 </head>
 
 <body>
@@ -23,6 +36,10 @@
                 <a class="endpoint-btn" href="api_sdk_lmnop.html" style="text-decoration:none;">
                     <span class="method-badge get">API</span>
                     <span>API · SDK · LMNOP</span>
+                </a>
+                <a class="endpoint-btn" href="Wheels.html" style="text-decoration:none;">
+                    <span class="method-badge get">DOC</span>
+                    <span>Wheels</span>
                 </a>
 
                 <div class="doc-nav-section">Bookmarks API</div>

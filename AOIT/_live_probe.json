@@ -1,7 +1,7 @@
 {
   "ok": true,
   "error": null,
-  "import_noise": "2026-10-21 10:27:22,064 - DHD - WARNING - [DHD] Unknown galactic anchor 'STRING' (normalized: 'STRING'). Falling back to POINT_OF_ORIGIN (V:\\).\n",
+  "import_noise": "2026-10-21 11:40:17,519 - DHD - WARNING - [DHD] Unknown galactic anchor 'STRING' (normalized: 'STRING'). Falling back to POINT_OF_ORIGIN (V:\\).\n",
   "terminus_version": "2.0.1",
   "runtime_all_count": 238,
   "counts": {

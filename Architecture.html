@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Works from tesseract_city/docs/ (deployed) and from 01_Docs (authoring copy).
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>
+</head>
+<body>
+<div class="viewArea">
+<div class="pageHeader"><marquee>⚙️ TESSERACT CITY — SYSTEM ARCHITECTURE &amp; FOLDER HIERARCHY</marquee></div>
+<div class="mainArea">
+<div class="pageLeftMenu">
+<div class="doc-nav-section">Docs</div>
+<a class="endpoint-btn" href="index.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>API Reference</span></a>
+<a class="endpoint-btn" href="api_sdk_lmnop.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Surface (AOIT)</span></a>
+<a class="endpoint-btn" href="Architecture.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Architecture</span></a>
+<a class="endpoint-btn" href="MCP_and_Memory.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>MCP and Memory</span></a>
+<a class="endpoint-btn" href="Overview.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Overview</span></a>
+<a class="endpoint-btn" href="Template_Literals.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Template Literals</span></a>
+<a class="endpoint-btn" href="User_Guide.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>User Guide</span></a>
+<a class="endpoint-btn" href="Wheels.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Wheels</span></a>
+</div>
+<div class="pageContent">
+<div class="doc-stage active">
+<h1>System Architecture &amp; Folder Hierarchy</h1>
+<pre><code>Atlas_of_Tesseract_City/ (__marinus__)
+├── README.md                  # Root workspace overview &amp; GitHub-style documentation
+├── CHANGELOG.md               # Keep-a-Changelog autonomous version &amp; batch history
+├── INGESTION_CHRONICLE.md     # Temporal truth ledger tracking source timestamps
+├── AGENTS.md                  # Master dense machine specification
+├── TODO                       # Priority task queue (erased as completed)
+├── Questions.md               # User escalation rules firewall
+├── GEMINI.md                  # Alias pointer
+├── .clinerules                # IDE rules pointer
+├── YYYY-MM-DD_HH-mm-ss.md     # Timestamped monolithic snapshots per cycle
+├── [MASTER_MONOLITH] Tesseract City Wiki.md # Companion markdown for NotebookLM
+├── [MASTER_MONOLITH] Tesseract City Wiki    # Persistent Google Doc (.gdoc) for NotebookLM
+│
+├── Input/                     # Drop zone for incoming notes, scripts, images
+│
+├── Output/                    # Immutable history organized by ingestion date
+│   └── YYYY-MM-DD/            # Archived original source files
+│
+├── Wiki/                      # Standalone hostable website &amp; GitHub Pages root
+│   ├── index.html             # Website home portal &amp; master registry
+│   ├── css/style.css          # Tesseract City cyberpunk typography &amp; layout
+│   ├── js/wiki.js             # Client scripts, code downloaders, search engine
+│   ├── templates/article.html # Canonical page template
+│   ├── Images/                # Web-optimized image assets (1200px max)
+│   ├── graph.json             # Interactive 2D knowledge graph dataset
+│   ├── search-index.json      # Client-side full-text search index
+│   └── .github/workflows/     # deploy-wiki.yml for GitHub Pages
+│
+├── Docs/                      # Dynamic system documentation (Overwritten with latest app specs)
+│   ├── Overview.md            # High-level system overview &amp; pillars
+│   ├── Architecture.md        # Folder hierarchy &amp; subsystem data flows
+│   ├── User_Guide.md          # Step-by-step operator workflows
+│   └── MCP_and_Memory.md      # Model Context Protocol &amp; Mem0 cognitive memory
+│
+├── .github/                   # Autonomous agent configuration &amp; skills
+│   ├── agents/atlas.agent.md  # Titan Atlas persona &amp; voice
+│   ├── copilot-instructions.md# VS Code Copilot alignment
+│   ├── instructions/          # Domain instructions
+│   └── Skills/                # Modular skills (synthesis, mermaid, code, github)
+│
+└── .vscode/                   # Developer workspace configuration
+    ├── settings.json          # IDE settings
+    ├── tasks.json             # Pipeline runners
+    ├── mcp.json               # Model Context Protocol servers &amp; lifecycle hooks
+    └── tasks/run_pipeline.py  # Automation script</code></pre>
+</div>
+</div>
+</div>
+<div class="pageFooter"><span>Compiled from Architecture.md · <a href="../../index.html">Homepage</a></span></div>
+</div>
+</body>
+</html>

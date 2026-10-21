@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" src="../../js/dynamichead.js"></script>
+    <script>
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>
 </head>
 <body>
 <div class="viewArea">
 <div class="pageHeader">
-<marquee>⚙️ TESSERACT CITY — API · SDK · LMNOP — Terminus 2.0.1 — generated 2026-10-21 14:27:20Z</marquee>
+<marquee>⚙️ TESSERACT CITY — API · SDK · LMNOP — Terminus 2.0.1 — generated 2026-10-21 15:40:16Z</marquee>
 </div>
 <div class="mainArea">
 <div class="pageLeftMenu">

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Works from tesseract_city/docs/ (deployed) and from 01_Docs (authoring copy).
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>
+</head>
+<body>
+<div class="viewArea">
+<div class="pageHeader"><marquee>⚙️ TESSERACT CITY — TEMPLATE LITERALS — THE `${...}` BOOK OF SPELLS</marquee></div>
+<div class="mainArea">
+<div class="pageLeftMenu">
+<div class="doc-nav-section">Docs</div>
+<a class="endpoint-btn" href="index.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>API Reference</span></a>
+<a class="endpoint-btn" href="api_sdk_lmnop.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Surface (AOIT)</span></a>
+<a class="endpoint-btn" href="Architecture.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Architecture</span></a>
+<a class="endpoint-btn" href="MCP_and_Memory.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>MCP and Memory</span></a>
+<a class="endpoint-btn" href="Overview.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Overview</span></a>
+<a class="endpoint-btn" href="Template_Literals.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Template Literals</span></a>
+<a class="endpoint-btn" href="User_Guide.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>User Guide</span></a>
+<a class="endpoint-btn" href="Wheels.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Wheels</span></a>
+</div>
+<div class="pageContent">
+<div class="doc-stage active">
+<h1>Template Literals — the <code>${...}</code> book of spells</h1>
+<p>A JavaScript template literal is a string built at the moment it is evaluated. Anything inside <code>${...}</code> is a <strong>JavaScript expression</strong>, and its result is coerced to a string.</p>
+<pre><code>const who = &quot;world&quot;;
+`hello ${who}`        // &quot;hello world&quot;</code></pre>
+<p>That is the whole rule. Everything below is just a catalogue of what you are allowed to put in the braces. The expression runs <strong>when the string is built</strong>, not when it is later used, and it runs in whatever scope the literal sits in.</p>
+<blockquote><p>Stored here because looking at the list is like reading a book of spells. Keep it handy.</p></blockquote>
+<hr>
+<h2>1. Variables and object properties</h2>
+<pre><code>${baseURL}
+${user.name}
+${config.theme}
+${items[0]}
+${items.at(-1)}</code></pre>
+<h2>2. Browser, window, document</h2>
+<table class="param-table"><thead><tr><th>Expression</th><th>Returns</th></tr></thead><tbody>
+<tr><td><code>document.URL</code></td><td>full page URL</td></tr>
+<tr><td><code>document.domain</code></td><td>domain only</td></tr>
+<tr><td><code>document.title</code></td><td>current <code>&lt;title&gt;</code></td></tr>
+<tr><td><code>document.referrer</code></td><td>referring page</td></tr>
+<tr><td><code>document.characterSet</code></td><td>e.g. <code>UTF-8</code></td></tr>
+<tr><td><code>document.lastModified</code></td><td>last modified date</td></tr>
+<tr><td><code>document.cookie</code></td><td>all cookies as one string</td></tr>
+<tr><td><code>window.location.href</code></td><td>full URL</td></tr>
+<tr><td><code>window.location.protocol</code></td><td><code>https:</code> or <code>file:</code></td></tr>
+<tr><td><code>window.location.host</code></td><td><code>host:port</code></td></tr>
+<tr><td><code>window.location.pathname</code></td><td>path only</td></tr>
+<tr><td><code>window.location.search</code></td><td>query string</td></tr>
+<tr><td><code>window.location.hash</code></td><td><code>#fragment</code></td></tr>
+<tr><td><code>navigator.userAgent</code></td><td>browser string</td></tr>
+<tr><td><code>navigator.language</code></td><td>e.g. <code>en-US</code></td></tr>
+<tr><td><code>navigator.platform</code></td><td>OS string</td></tr>
+<tr><td><code>navigator.onLine</code></td><td><code>true</code> / <code>false</code></td></tr>
+<tr><td><code>screen.width</code> / <code>screen.height</code></td><td>screen px</td></tr>
+<tr><td><code>screen.colorDepth</code></td><td>e.g. <code>24</code></td></tr>
+<tr><td><code>window.devicePixelRatio</code></td><td>e.g. <code>2</code></td></tr>
+<tr><td><code>window.innerWidth</code> / <code>innerHeight</code></td><td>viewport px</td></tr>
+<tr><td><code>Intl.DateTimeFormat().resolvedOptions().timeZone</code></td><td>e.g. <code>America/Chicago</code></td></tr>
+</tbody></table>
+<h2>3. Storage and state</h2>
+<pre><code>${localStorage.getItem(&#x27;theme&#x27;) || &#x27;dark&#x27;}
+${sessionStorage.getItem(&#x27;lang&#x27;)}
+${JSON.parse(localStorage.getItem(&#x27;user&#x27;) || &#x27;{}&#x27;).name}</code></pre>
+<h2>4. Time and performance</h2>
+<pre><code>${new Date().getFullYear()}
+${new Date().toISOString()}
+${Date.now()}
+${performance.now()}</code></pre>
+<h2>5. Math and random</h2>
+<pre><code>${Math.random()}
+${Math.PI}
+${Math.max(a, b)}
+${Math.random().toString(36).slice(2, 10)}   // nonce</code></pre>
+<h2>6. Function calls</h2>
+<p>Anything that returns a value works, including calls defined in the same script.</p>
+<pre><code>${getTheme()}
+${detectBrowser()}
+${generateNonce()}</code></pre>
+<h2>7. Ternaries and conditionals</h2>
+<pre><code>${isMobile ? &#x27;/css/mobile.css&#x27; : &#x27;/css/desktop.css&#x27;}
+${darkMode ? &#x27;#0a0a0a&#x27; : &#x27;#ffffff&#x27;}
+${user?.role === &#x27;admin&#x27; ? &#x27;/js/admin.js&#x27; : &#x27;&#x27;}</code></pre>
+<h2>8. Logical short-circuits</h2>
+<pre><code>${debug &amp;&amp; &#x27;/js/debug-overlay.js&#x27;}   // false -&gt; empty string
+${region || &#x27;us-east&#x27;}               // fallback
+${token ?? &#x27;anonymous&#x27;}              // nullish fallback</code></pre>
+<h2>9. String operations</h2>
+<pre><code>${baseURL.replace(/^http:/, &#x27;https:&#x27;)}
+${userAgent.split(&#x27; &#x27;)[0]}
+${path.split(&#x27;/&#x27;).pop()}
+${String(42).padStart(4, &#x27;0&#x27;)}</code></pre>
+<h2>10. Nested templates</h2>
+<pre><code>`&lt;link rel=&#x27;stylesheet&#x27; href=&#x27;${baseURL}/css/${themeName}.css&#x27;&gt;`</code></pre>
+<h2>11. Tagged templates</h2>
+<p>A tag function receives the literal parts and the evaluated values separately. <code>String.raw</code> disables escape processing, which is useful for paths and regexes.</p>
+<pre><code>String.raw`V:\__marinus__\01_Docs`   // backslashes stay intact</code></pre>
+<h2>12. Async values</h2>
+<p><code>${}</code> cannot await by itself. Await first, then interpolate:</p>
+<pre><code>const data = await fetch(url).then(r =&gt; r.json());
+`&lt;h1&gt;${data.title}&lt;/h1&gt;`</code></pre>
+<hr>
+<h2>Safety, in four lines</h2>
+<ul><li><strong>Nothing is escaped.</strong> If the value comes from a URL, a form, or storage, it is raw HTML.</li></ul>
+<p>Interpolating user input into a template that becomes markup is an XSS hole.</p>
+<ul><li><strong>It runs at build time, not render time.</strong> A value captured in a literal is frozen at the</li></ul>
+<p>moment the string is created.</p>
+<ul><li><strong>It runs in scope.</strong> If the name is not in scope, you get a <code>ReferenceError</code>, not <code>undefined</code>.</li><li><strong><code>undefined</code> becomes the text <code>"undefined"</code>.</strong> It does not throw and it does not disappear.</li></ul>
+<hr>
+<h2>How this site uses it: the <code>baseURL</code> ladder</h2>
+<p><code>js/dynamichead.js</code> is the only script a page needs in its head. It derives <code>baseURL</code> from its own <code>&lt;script src&gt;</code>, then decides which base every asset should use:</p>
+<table class="param-table"><thead><tr><th>Page opened from</th><th>Derived base</th><th>Probe</th><th>Final base</th></tr></thead><tbody>
+<tr><td><code>https://gewey.github.io/...</code></td><td>https</td><td>not run</td><td>https</td></tr>
+<tr><td><code>file:///.../js/dynamichead.js</code> with the site on the same disk</td><td>file</td><td>loads <code>falling_up_steps.js</code></td><td>file</td></tr>
+<tr><td><code>file:///...</code> with no site on that disk</td><td>file</td><td><code>falling_up_steps.js</code> 404s</td><td>https://gewey.github.io</td></tr>
+<tr><td><code>file:///...</code> whose head was loaded from the live site</td><td>https</td><td>not run</td><td>https</td></tr>
+</tbody></table>
+<p>One decision, made once, applied to every <code>${baseURL}</code> in the head. <code>falling_up_steps.js</code> exists to be requested: if the request succeeds, a local mirror exists; if it fails, the failure is the answer. Pages opened online never probe, so their behaviour is unchanged.</p>
+<hr>
+<p><em>Reference compiled into website form by <code>docs_compiler.py</code> alongside the rest of the docs module.</em></p>
+</div>
+</div>
+</div>
+<div class="pageFooter"><span>Compiled from Template_Literals.md · <a href="../../index.html">Homepage</a></span></div>
+</div>
+</body>
+</html>

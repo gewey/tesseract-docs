@@ -31,7 +31,21 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DOCS_DIR = Path(__file__).resolve().parent
-HEAD_SCRIPT = "../../js/dynamichead.js"
+
+# Works from tesseract_city/docs/ (deployed) and from 01_Docs (authoring copy) by falling
+# back to the live site when the relative path has no site root above it.
+_HEAD_LOADER = """    <script>
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>"""
 
 
 # =========================================================================
@@ -248,7 +262,7 @@ def _render_page(manifest, summary):
         "<!DOCTYPE html>",
         "<html lang=\"en\">",
         "<head>",
-        f"    <script type=\"text/javascript\" src=\"{HEAD_SCRIPT}\"></script>",
+        _HEAD_LOADER,
         "</head>",
         "<body>",
         "<div class=\"viewArea\">",
@@ -292,6 +306,22 @@ function loadDoc(docId) {
 # GENERATION
 # =========================================================================
 
+def _compile_markdown_docs(docs):
+    """Render every authored .md in the docs module into website form."""
+    compiler = docs / "docs_compiler.py"
+    if not compiler.is_file():
+        return {"skipped": "docs_compiler.py not present"}
+    try:
+        spec = importlib.util.spec_from_file_location("docs_compiler", compiler)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module.compile_all(docs)
+    except Exception as exc:  # noqa: BLE001 - a compile failure must not block publish
+        print(f"[api_sdk_lmnop] markdown compile skipped: {type(exc).__name__}: {exc}",
+              file=sys.stderr)
+        return {"error": f"{type(exc).__name__}: {exc}"}
+
+
 def generate(out_dir=None, run_live=True):
     """Measure in Terminus, publish in Marinus. Writes nothing into Terminus."""
     docs = Path(out_dir) if out_dir else DOCS_DIR
@@ -305,9 +335,12 @@ def generate(out_dir=None, run_live=True):
     page = docs / "api_sdk_lmnop.html"
     page.write_text(_render_page(manifest, summary), encoding="utf-8")
 
+    compiled = _compile_markdown_docs(docs)
+
     return {
         "page": str(page),
         "data_dir": str(data_dir),
+        "compiled": compiled,
         "generated": manifest.get("generated"),
         "shelves": summary.get("shelves"),
         "absent": summary.get("absent"),

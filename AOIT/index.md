@@ -1,6 +1,6 @@
 # AOIT — API · SDK · LMNOP
 
-Generated 2026-10-21 14:27:20Z from `V:\__terminus__`.
+Generated 2026-10-21 15:40:16Z from `V:\__terminus__`.
 
 This is a report about a system, produced by executing it. Static facts come from `ast` parsing of every shelf; live facts come from a child process that imported `_TERMINUS`. Neither step can break the other.
 

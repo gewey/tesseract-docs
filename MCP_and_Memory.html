@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Works from tesseract_city/docs/ (deployed) and from 01_Docs (authoring copy).
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>
+</head>
+<body>
+<div class="viewArea">
+<div class="pageHeader"><marquee>⚙️ TESSERACT CITY — MODEL CONTEXT PROTOCOL (MCP) &amp; MEM0 COGNITIVE MEMORY</marquee></div>
+<div class="mainArea">
+<div class="pageLeftMenu">
+<div class="doc-nav-section">Docs</div>
+<a class="endpoint-btn" href="index.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>API Reference</span></a>
+<a class="endpoint-btn" href="api_sdk_lmnop.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Surface (AOIT)</span></a>
+<a class="endpoint-btn" href="Architecture.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Architecture</span></a>
+<a class="endpoint-btn" href="MCP_and_Memory.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>MCP and Memory</span></a>
+<a class="endpoint-btn" href="Overview.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Overview</span></a>
+<a class="endpoint-btn" href="Template_Literals.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Template Literals</span></a>
+<a class="endpoint-btn" href="User_Guide.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>User Guide</span></a>
+<a class="endpoint-btn" href="Wheels.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Wheels</span></a>
+</div>
+<div class="pageContent">
+<div class="doc-stage active">
+<h1>Model Context Protocol (MCP) &amp; Mem0 Cognitive Memory</h1>
+<p>Titan Atlas incorporates the Model Context Protocol (MCP) to connect external intelligence systems and long-term memory.</p>
+<h2>Configuration (<code>.vscode/mcp.json</code>)</h2>
+<p>The workspace configuration defines HTTP MCP servers and automated lifecycle hooks:</p>
+<ul><li><code>cycle_start</code>: Automated queries (e.g. Mem0 <code>search_memories</code>) to load historical architectural context into the agent's prompt.</li><li><code>turn_start</code> / <code>turn_end</code>: Granular short-turn lifecycle triggers.</li><li><code>cycle_end</code>: Automated recording (e.g. Mem0 <code>add_memory</code> to persist batch summaries; Notion <code>sync_wiki_pages</code> to mirror pages).</li></ul>
+<h2>Injected Cognitive Context</h2>
+<p>Memories returned by MCP servers are injected directly into the Gemini prompt under <code>## 🧠 Mem0 / MCP Long-Term Memories Injected</code>, ensuring the model never suffers from amnesia across restarts.</p>
+</div>
+</div>
+</div>
+<div class="pageFooter"><span>Compiled from MCP_and_Memory.md · <a href="../../index.html">Homepage</a></span></div>
+</div>
+</body>
+</html>

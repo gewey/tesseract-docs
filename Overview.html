@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Works from tesseract_city/docs/ (deployed) and from 01_Docs (authoring copy).
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>
+</head>
+<body>
+<div class="viewArea">
+<div class="pageHeader"><marquee>⚙️ TESSERACT CITY — ATLAS OF TESSERACT CITY — SYSTEM OVERVIEW</marquee></div>
+<div class="mainArea">
+<div class="pageLeftMenu">
+<div class="doc-nav-section">Docs</div>
+<a class="endpoint-btn" href="index.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>API Reference</span></a>
+<a class="endpoint-btn" href="api_sdk_lmnop.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Surface (AOIT)</span></a>
+<a class="endpoint-btn" href="Architecture.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Architecture</span></a>
+<a class="endpoint-btn" href="MCP_and_Memory.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>MCP and Memory</span></a>
+<a class="endpoint-btn" href="Overview.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Overview</span></a>
+<a class="endpoint-btn" href="Template_Literals.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Template Literals</span></a>
+<a class="endpoint-btn" href="User_Guide.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>User Guide</span></a>
+<a class="endpoint-btn" href="Wheels.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Wheels</span></a>
+</div>
+<div class="pageContent">
+<div class="doc-stage active">
+<h1>Atlas of Tesseract City — System Overview</h1>
+<p><strong>Atlas of Tesseract City</strong> is a private, autonomous knowledge base and intelligence engine residing directly within Google Drive (<code>__marinus__</code>).</p>
+<h2>🌌 Core Philosophy &amp; Purpose</h2>
+<p>The system orchestrates multi-agent knowledge engineering:</p>
+<ul><li>Ingests raw media assets, documents, notes, code scripts, and color palettes from the <strong>Input/</strong> queue.</li><li>Synthesizes Wikipedia-grade interconnected HTML articles with Mermaid.js architecture diagrams and bidirectional backlinks.</li><li>Employs an <strong>Incremental Short-Turn Pipeline</strong>: writes synthesized articles to Google Drive immediately per turn, avoiding single-point-of-failure loops.</li><li>Employs an <strong>Activity Log Memory Engine</strong>: inspects cycle logs and historical archives to prevent repetitive resizing loops and gracefully recover from Gemini 503 high-demand interruptions.</li><li>Guarantees <strong>Zero Orphaned Media</strong>: 100% of processed graphics, heraldic emblems, color swatches, screenshots, and infographics are cataloged and embedded.</li><li>Bridges to <strong>External Knowledge Sinks</strong>: mirrors content to Google NotebookLM via persistent in-place Google Docs &amp; companion markdown, Notion via rich semantic blocks, and GitHub Pages.</li></ul>
+<h2>🏛️ Invariant Guardrails</h2>
+<ol><li><strong>Titan Atlas</strong>: Embodying cosmic stewardship and deterministic execution.</li><li><strong>Deterministic Rules Hierarchy</strong>: Strict compliance with AGENTS.md, .clinerules, and .github/ directives.</li><li><strong>Security Shield</strong>: Sensitive credentials (API tokens, private keys) are automatically scrubbed; borderline ambiguous files remain in Input while questions are escalated to Questions.md.</li><li><strong>Non-Destructive Evolution</strong>: Wiki pages are continuously synthesized and enriched—never deleted or blanked.</li></ol>
+</div>
+</div>
+</div>
+<div class="pageFooter"><span>Compiled from Overview.md · <a href="../../index.html">Homepage</a></span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Works from tesseract_city/docs/ (deployed) and from 01_Docs (authoring copy).
+        (function () {
+            var local = document.createElement("script");
+            local.src = "../../js/dynamichead.js";
+            local.onerror = function () {
+                var remote = document.createElement("script");
+                remote.src = "https://gewey.github.io/js/dynamichead.js";
+                document.head.appendChild(remote);
+            };
+            document.head.appendChild(local);
+        })();
+    </script>
+</head>
+<body>
+<div class="viewArea">
+<div class="pageHeader"><marquee>⚙️ TESSERACT CITY — WHEELS</marquee></div>
+<div class="mainArea">
+<div class="pageLeftMenu">
+<div class="doc-nav-section">Docs</div>
+<a class="endpoint-btn" href="index.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>API Reference</span></a>
+<a class="endpoint-btn" href="api_sdk_lmnop.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Surface (AOIT)</span></a>
+<a class="endpoint-btn" href="Architecture.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Architecture</span></a>
+<a class="endpoint-btn" href="MCP_and_Memory.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>MCP and Memory</span></a>
+<a class="endpoint-btn" href="Overview.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Overview</span></a>
+<a class="endpoint-btn" href="Template_Literals.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Template Literals</span></a>
+<a class="endpoint-btn" href="User_Guide.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>User Guide</span></a>
+<a class="endpoint-btn" href="Wheels.html" style="text-decoration:none;"><span class="method-badge get">DOC</span><span>Wheels</span></a>
+</div>
+<div class="pageContent">
+<div class="doc-stage active">
+<h1>Wheels</h1>
+<p><strong>Reusable machinery already in Tesseract City.</strong> Read this before you build a fourth version of something that exists.</p>
+<p>Verified against the running substrate on 2026-10-21. Paths are relative to <code>V:\</code>.</p>
+<blockquote><p>The docs publishing pipeline is not a new system. It is five small scripts dropped into</p><p><code>00_Tasks/docsPublish/</code>, riding the task master that already existed. That is the intended way</p><p>to add automation here.</p></blockquote>
+<hr>
+<h2>1. Three orchestrators, three scopes</h2>
+<p>They look alike. They are not the same job.</p>
+<table class="param-table"><thead><tr><th>Scope</th><th>Mechanism</th><th>Triggered by</th><th>Lives in</th></tr></thead><tbody>
+<tr><td>Editor lifecycle</td><td><code>hooks.json</code> + <code>dead_pregnant_hooker</code></td><td>session start, prompt submit, tool use, file change, stop</td><td><code>.github/hooks/</code></td></tr>
+<tr><td>Workspace actions</td><td><code>.vscode/tasks.json</code> + <code>task_master</code></td><td>folder open, worktree created, manual command</td><td><code>.vscode/</code>, <code>__sentinus__/00_Tasks/</code></td></tr>
+<tr><td>Agent identity</td><td>morning ritual modules + genes</td><td>one agent booting</td><td><code>__sentinus__/01_Wake_Up/</code>, <code>genes/</code></td></tr>
+</tbody></table>
+<p>Rule of thumb: if the trigger is <strong>the editor</strong>, it is a hook. If it is <strong>a human or folder state</strong>, it is a task. If it is <strong>"who am I this session"</strong>, it is a gene.</p>
+<hr>
+<h2>2. Task master — <code>00_Tasks/__ssot_task_master.py</code></h2>
+<p>One dispatcher. Many events. Each event is an ordered list of scripts, plus a folder that is auto-discovered.</p>
+<pre><code>TASK_REGISTRY = {
+    &quot;runOn_folderOpen&quot;: [...],
+    &quot;runOn_worktreeCreated&quot;: [...],
+    &quot;docsPublish&quot;: [
+        &quot;docsPublish/01_generate.py&quot;,
+        &quot;docsPublish/02_guard.py&quot;,
+        &quot;docsPublish/03_commit.py&quot;,
+        &quot;docsPublish/04_mirror.py&quot;,
+        &quot;docsPublish/05_archive.py&quot;,
+    ],
+}</code></pre>
+<p><strong>What you get for free by using it:</strong></p>
+<ul><li><code>run_script_safely()</code> — existence check, cooldown gate, dry-run, UTF-8 subprocess, timing,</li></ul>
+<p>telemetry, and a JSONL log per event in <code>V:\.logs\Tasks\{event}\{date}.jsonl</code>.</p>
+<ul><li><code>dispatch_event()</code> — a dedicated <code>{Event}.py</code> handler first, then registry order, then every</li></ul>
+<p>non-underscore <code>.py</code> in <code>00_Tasks/{event}/</code>, in sorted order.</p>
+<ul><li>Fail-fast for pipelines: <code>docsPublish</code> and <code>dependsOn</code> stop at the first failing stage.</li><li><code>--release</code> is passed through to every stage.</li></ul>
+<p><strong>CLI</strong></p>
+<pre><code>python __sentinus__/00_Tasks/__ssot_task_master.py --event docsPublish
+python ... --event docsPublish --dry-run
+python ... --event docsPublish --release
+python ... --force          # bypass cooldown
+python ... --list           # show every event and whether its scripts exist</code></pre>
+<p><strong>To add a stage:</strong> drop <code>06_something.py</code> into <code>00_Tasks/{event}/</code>. No orchestrator edit. <strong>To add an event:</strong> one line in <code>TASK_REGISTRY</code>, or a <code>{Event}.py</code> handler with <code>handle(...)</code>.</p>
+<hr>
+<h2>3. Hooks — <code>.github/hooks/hooks.json</code> + <code>00_Hookers/</code></h2>
+<p>Thirty lifecycle events (SessionStart, UserPromptSubmit, PreToolUse, FileChanged, Stop, SubagentStart, TaskCreated, …). Each entry carries per-platform <code>command</code>, <code>cwd</code>, <code>timeout</code>, <code>failOpen</code>, and <code>env</code>.</p>
+<p><strong>The chain:</strong></p>
+<pre><code>hooks.json → {Event}.ps1 → __ssot_dead_pregnant_hooker.py --event {Event}
+           → {Event}.py → scripts in 00_Hookers/{Event}/
+           → _engine_adapters.py shapes output per engine (Copilot, Antigravity, Cline, Claude)</code></pre>
+<p><strong>Ironclad Stream Protection.</strong> The hooker saves the real stdout for machine-readable JSON and redirects <code>sys.stdout</code> to stderr before importing anything. That is why a chatty import can never corrupt an engine's JSON parser. Copy that trick into any script whose stdout is a protocol.</p>
+<p><strong>Use hooks for observation, not for publishing.</strong> A hook that pushes to a live site is a hook that can push at 3am with nobody watching.</p>
+<hr>
+<h2>4. Mirror primitives — <code>01_Wake_Up/morning_ritual_modules/__cubby_sync.py</code></h2>
+<p>The safest copy/publish primitives in the substrate. They are written for cubby files but they are generic:</p>
+<pre><code>sync_file(path, content, check_only, backup_root) -&gt; bool   # True if changed
+atomic_write_text(path, content)                            # temp file + os.replace
+backup_existing_file(path, backup_root)                     # copy before overwrite</code></pre>
+<p><code>sync_file</code> <strong>compares before writing</strong>. If the content is identical, it writes nothing and returns <code>False</code>. That property is what makes "publish" able to mean "no change, no commit, no churn" — provided the generator upstream is also stable.</p>
+<p><code>atomic_write_text</code> writes to a temp file in the same directory and replaces, so a crash cannot leave a half-written page. On Windows this is the correct replacement for delete-and-rename.</p>
+<hr>
+<h2>5. Archive pattern — <code>genes/agent_specific/b034_indestructible.py</code></h2>
+<p>The reference implementation for "seal this, now, so it survives".</p>
+<pre><code>_resolve_agent_paths(context)      # name -&gt; (agent file, cubby)
+_backup_agent(agent, file, cubby)  # -&gt; (zip_path, error)</code></pre>
+<p>It resolves sources, skips cleanly if none exist, writes a deflated zip with <strong>relative paths</strong> (<code>p.relative_to(src.parent)</code>), and timestamps the filename. Destination: <code>B:/__general_backup/indestructible_trait/_{Agent}_{YYYY-MM-DD_HH-MM}.zip</code>.</p>
+<p>Copy the shape for any release bundle. Two changes for a code release: put the commit SHA in the name, and exclude <code>.git</code>, <code>__pycache__</code>, and any state directory.</p>
+<hr>
+<h2>6. Anti-wipe — <code>genes/agent_specific/handbook_deathgrip.gene.py</code></h2>
+<p>Three rules that keep a bad generation from destroying good pages:</p>
+<ol><li><strong>Threshold alarm</strong> — a critical file that is missing, or smaller than its expected size</li></ol>
+<p>(its convention is 2 KB), is an emergency, not a housekeeping note.</p>
+<ol><li><strong>Safekeeping before work</strong> — snapshot before the risky operation, not after the loss.</li><li><strong>Kintsugi</strong> — never overwrite damage with a blank template. The wound stays visible until it</li></ol>
+<p>is healed with real content.</p>
+<p>The docs pipeline's <code>02_guard.py</code> is this gene wearing a different coat: a threshold table over <code>index.html</code>, <code>api_sdk_lmnop.html</code>, the manifest, and the authored markdown.</p>
+<hr>
+<h2>7. Managed regions — <code>genes/GENE_SCHEMA_INJECTER.py</code></h2>
+<p>When a file is <strong>partly generated and partly authored</strong>, do not regenerate the whole file. This tool injects only between boundary markers and leaves everything outside untouched:</p>
+<pre><code>SCHEMA_VARIABLE_HEADER = &quot;=-=-=-=-=-=-=-=-=VARIABLES/=-=-=-=-=-=-=-=-=&quot;
+...managed block...
+SCHEMA_VARIABLE_FOOTER = &quot;=-=-=-=-=-=-=-=-=/VARIABLES=-=-=-=-=-=-=-=-=&quot;</code></pre>
+<p><code>inject_schema_to_gene()</code> + <code>format_literal_assignment()</code> are idempotent: running twice produces the same file. If shelf intros or page prose ever become hand-written, this is the pattern to reach for instead of owning the entire page.</p>
+<hr>
+<h2>8. Module protocol — <code>01_Wake_Up/morning_ritual_modules/</code></h2>
+<p>Every module is a file with:</p>
+<pre><code>MODULE_ORDER = 1
+MODULE_NAME  = &quot;Inject_Critical_Agent_Files&quot;
+
+def run(context: MutableMapping[str, Any]) -&gt; None: ...</code></pre>
+<p><code>context</code> carries <code>root_dir</code>, <code>config</code>, <code>record_telemetry</code>, <code>agent_home_dir</code>, <code>started</code>, <code>ok_count</code>, <code>total_count</code>. The runner counts successes and sets the exit code from <code>ok_count == total_count</code>. <code>90_Telemetry</code> emits the boot record last.</p>
+<p>The <code>check_only</code> pattern from <code>08_Cubby_Self_Check</code> is worth copying: pass a flag through the whole module so the same code can report without writing.</p>
+<p>Use this protocol for <strong>identity boot only</strong>. It is a fourth orchestrator if you use it for anything else.</p>
+<hr>
+<h2>9. Self-replacement — <code>genes/_function/altered_carbon.py</code></h2>
+<p><code>resleeve(gene_path, new_content)</code> writes a temp copy, waits for the running file's lock to release, deletes the original, and renames the temp into place, with backoff retries.</p>
+<p>It exists because a Python module cannot safely rewrite the file it is currently executing from. For normal file replacement use <code>atomic_write_text</code>. Reach for altered carbon only when the file being replaced is the file that is running.</p>
+<hr>
+<h2>10. Worked example: <code>docsPublish</code></h2>
+<pre><code>publish.py  →  task_master --event docsPublish
+                ├─ 01_generate  run the SSOT, produce manifest + markdown + HTML
+                ├─ 02_guard     thresholds, secret scan, mirror divergence
+                ├─ 03_commit    commit + push the authoring repo (01_Docs)
+                ├─ 04_mirror    copy into the deploy target, update provenance/submodule
+                └─ 05_archive   --release only: zip to B:\ and update RELEASED.json</code></pre>
+<p>Each stage is one file, returns an int, and gets cooldown, dry-run, logging, and telemetry from the task master. Editing the pipeline means editing one small file or dropping in a new one.</p>
+<hr>
+<h2>11. What these do not do</h2>
+<p>Not defects — just the edges of the tools, so you do not expect them to do this:</p>
+<ul><li><strong>No git-state awareness.</strong> <code>sync_file</code> compares bytes, not history. Knowing <em>who was allowed</em></li></ul>
+<p>to change a mirror is a separate check (the docs pipeline keeps a <code>source_sha</code> + <code>tree_hash</code> in <code>.provenance.json</code>).</p>
+<ul><li><strong>No scheduling.</strong> Nothing here runs on a timer. Triggers are the editor, the folder, or you.</li><li><strong>No content hashing at the generator level.</strong> Compare-before-write exists per file in</li></ul>
+<p><code>sync_file</code>; a generator that stamps wall-clock time will still produce a diff every run.</p>
+<ul><li><strong>Hooks are fire-and-forget.</strong> <code>failOpen</code> means a broken hook is ignored rather than fatal.</li></ul>
+<hr>
+<h2>12. Provenance</h2>
+<p>Read on 2026-10-21 against:</p>
+<ul><li><code>__sentinus__/00_Tasks/__ssot_task_master.py</code></li><li><code>__sentinus__/00_Hookers/__ssot_dead_pregnant_hooker.py</code>, <code>.github/hooks/hooks.json</code></li><li><code>__sentinus__/01_Wake_Up/morning_ritual_modules/{01,04,08,90}*.py</code>, <code>_cubby_helpers.py</code>, <code>__cubby_sync.py</code></li><li><code>__sentinus__/01_Wake_Up/{_morning_ritual.py,_agentic_helix.py}</code></li><li><code>__sentinus__/01_Wake_Up/genes/{template.gene.py,GENE_SCHEMA_INJECTER.py,_function/altered_carbon.py}</code></li><li><code>__sentinus__/01_Wake_Up/genes/agent_specific/{b034_indestructible.py,handbook_deathgrip.gene.py}</code></li><li><code>.vscode/tasks.json</code></li><li><code>__sentinus__/00_Tasks/docsPublish/*.py</code>, <code>__marinus__/01_Docs/publish.py</code></li></ul>
+<p>If a wheel changes shape, update this page in the same commit that changes it.</p>
+</div>
+</div>
+</div>
+<div class="pageFooter"><span>Compiled from Wheels.md · <a href="../../index.html">Homepage</a></span></div>
+</div>
+</body>
+</html>
