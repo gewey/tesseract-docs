@@ -1,0 +1,5 @@
+# CEREBRINUS
+
+`OK` · generated 2026-10-21 12:49:38Z · 2 exported name(s)
+
+`CEREBRINUS_ANCHOR`, `CEREBRINUS_DIR`

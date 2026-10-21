@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="../../js/dynamichead.js"></script>
+</head>
+<body>
+<div class="viewArea">
+<div class="pageHeader">
+<marquee>⚙️ TESSERACT CITY — API · SDK · LMNOP — Terminus 2.0.1 — generated 2026-10-21 12:49:38Z</marquee>
+</div>
+<div class="mainArea">
+<div class="pageLeftMenu">
+<div class="doc-nav-section">Reference</div>
+<div class="endpoint-btn active" onclick="loadDoc('overview')"><span class="method-badge get">Σ</span><span>Runtime surface</span></div>
+<div class="doc-nav-section">Shelves</div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-00_Command')"><span class="method-badge get">1</span><span>00_Command</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-01_Path')"><span class="method-badge get">1</span><span>01_Path</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-02_Import')"><span class="method-badge get">1</span><span>02_Import</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-03_Model')"><span class="method-badge get">1</span><span>03_Model</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-04_Boilerplate')"><span class="method-badge get">1</span><span>04_Boilerplate</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-05_Registry')"><span class="method-badge get">1</span><span>05_Registry</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-06_Documentation')"><span class="method-badge get">2</span><span>06_Documentation</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-07_Memory')"><span class="method-badge get">1</span><span>07_Memory</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-08_Versions')"><span class="method-badge get">1</span><span>08_Versions</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-09.75_Platform')"><span class="method-badge get">1</span><span>09.75_Platform</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-10_Cooldown')"><span class="method-badge get">1</span><span>10_Cooldown</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-11_Blacklist')"><span class="method-badge get">1</span><span>11_Blacklist</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-12_Toolchain')"><span class="method-badge get">1</span><span>12_Toolchain</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-13_Secrets')"><span class="method-badge get">1</span><span>13_Secrets</span></div>
+<div class="endpoint-btn" onclick="loadDoc('shelf-99_Aurora')"><span class="method-badge get">1</span><span>99_Aurora</span></div>
+<div class="doc-nav-section">Hubs</div>
+<div class="endpoint-btn" onclick="loadDoc('hub-AUTOMATINUS')"><span class="method-badge get">H</span><span>AUTOMATINUS</span></div>
+<div class="endpoint-btn" onclick="loadDoc('hub-AVENTINUS')"><span class="method-badge get">H</span><span>AVENTINUS</span></div>
+<div class="endpoint-btn" onclick="loadDoc('hub-CEREBRINUS')"><span class="method-badge get">H</span><span>CEREBRINUS</span></div>
+<div class="endpoint-btn" onclick="loadDoc('hub-CONSERVATINUS')"><span class="method-badge get">H</span><span>CONSERVATINUS</span></div>
+<div class="endpoint-btn" onclick="loadDoc('hub-FABULINUS')"><span class="method-badge get">H</span><span>FABULINUS</span></div>
+<div class="endpoint-btn" onclick="loadDoc('hub-INUUS')"><span class="method-badge get">H</span><span>INUUS</span></div>
+<div class="endpoint-btn" onclick="loadDoc('hub-JOCINUS')"><span class="method-badge get">H</span><span>JOCINUS</span></div>
+<div class="endpoint-btn" onclick="loadDoc('hub-QUIRINUS')"><span class="method-badge get">H</span><span>QUIRINUS</span></div>
+<div class="endpoint-btn" onclick="loadDoc('hub-SENTINUS')"><span class="method-badge get">H</span><span>SENTINUS</span></div>
+</div>
+<div class="pageContent">
+<div id="overview" class="doc-stage active">
+<div class="endpoint-header"><span class="method-badge get">LIVE</span><span class="endpoint-path">from _TERMINUS import *</span></div>
+<p style="color:#DDD;line-height:1.6;">Every shelf of Terminus contributes names to one flat surface. This page is that surface, measured from the running substrate: static facts come from parsing each numbered shelf, live facts from a child process that imported <code>_TERMINUS</code>. Add a shelf and it appears here; remove one and every other section is unchanged.</p>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Reaching it</h3>
+<pre><code>from _TERMINUS import *            # the whole surface
+from _TERMINUS import get_module   # reach any script by name
+thing = get_module('my_script')</code></pre>
+<h3 style="color:var(--color-accent,#EE00EE);font-size:1em;">Surface</h3>
+<table class="param-table"><thead><tr><th>Measure</th><th>Value</th></tr></thead><tbody>
+<tr><td>Exported names</td><td><code>238</code></td></tr>
+<tr><td>Callable</td><td><code>163</code></td></tr>
+<tr><td>Classes</td><td><code>15</code></td></tr>
+<tr><td>Modules</td><td><code>24</code></td></tr>
+<tr><td>Plain values</td><td><code>34</code></td></tr>
+<tr><td>Unbound names</td><td><code>2</code></td></tr>
+<tr><td>Hubs loaded</td><td><code>9/9</code></td></tr>
+</tbody></table>
+<h3 style="color:var(--color-accent,#EE00EE);font-size:1em;">Names shared by hubs</h3>
+<p style="color:#DDD;">A few names are exported by more than one sibling hub. The binding you receive is the hub that sorts first.</p>
+<table class="param-table"><thead><tr><th>Name</th><th>Hubs</th><th>Binding</th></tr></thead><tbody>
+<tr><td><code>DHD</code></td><td>AUTOMATINUS, INUUS, SENTINUS</td><td><code>AUTOMATINUS</code></td></tr>
+<tr><td><code>record_telemetry</code></td><td>AUTOMATINUS, INUUS, SENTINUS</td><td><code>AUTOMATINUS</code></td></tr>
+<tr><td><code>get_module</code></td><td>INUUS, SENTINUS</td><td><code>INUUS</code></td></tr>
+<tr><td><code>run_morning_ritual_for</code></td><td>AUTOMATINUS, SENTINUS</td><td><code>AUTOMATINUS</code></td></tr>
+<tr><td><code>_DISCOVERED_SSOTS</code></td><td>AVENTINUS, CEREBRINUS, CONSERVATINUS, FABULINUS, JOCINUS, QUIRINUS, SENTINUS</td><td><code>AVENTINUS</code></td></tr>
+<tr><td><code>_SSOT_MODULES</code></td><td>AVENTINUS, CEREBRINUS, CONSERVATINUS, FABULINUS, JOCINUS, QUIRINUS, SENTINUS</td><td><code>AVENTINUS</code></td></tr>
+</tbody></table>
+</div>
+<div id="shelf-00_Command" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">00_Command</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_stargate_command.py</code><br><small style="color:#999;"></small></td><td><code>2.0.0</code></td><td><code>1246</code></td><td><code>3</code></td><td><code>1</code></td><td>—</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>DHD</code> <code>OmegaUnifiedCore</code> <code>StargateCommand</code> <code>comtrya</code> <code>get_iso_timestamp</code> <code>get_ssot_contract</code> <code>record_telemetry</code> <code>standards_health</code> <code>terminus</code> <code>write_contract_lock</code> </p>
+</div>
+<div id="shelf-01_Path" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">01_Path</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_dial_home_device.py</code><br><small style="color:#999;"></small></td><td><code>2.0.0</code></td><td><code>475</code></td><td><code>4</code></td><td><code>2</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>DHD</code> <code>DialHomeDevice</code> <code>ROOT_DIR</code> <code>TERMINUS_DIR</code> <code>VscodeResolverQuark</code> <code>bootstrap_script_memory_on_import</code> <code>comtrya</code> <code>get_iso_timestamp</code> <code>record_telemetry</code> <code>terminus</code> </p>
+</div>
+<div id="shelf-02_Import" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">02_Import</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_zero_point_module.py</code><br><small style="color:#999;"></small></td><td><code>2.0.0</code></td><td><code>1008</code></td><td><code>34</code></td><td><code>5</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>DHD</code> <code>LocalCache</code> <code>OmegaUnifiedCore</code> <code>QuarkIOBase</code> <code>QuarkIOResult</code> <code>comtrya</code> <code>get_comtrya</code> <code>get_iso_timestamp</code> <code>get_ssot_contract</code> <code>get_ssot_standards</code> <code>push_recent_exchange</code> <code>recall_last_script_memory</code> <code>record_script_memory</code> <code>record_telemetry</code> <code>standards_health</code> <code>terminus</code> <code>write_contract_lock</code> </p>
+</div>
+<div id="shelf-03_Model" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">03_Model</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_comtrya.py</code><br><small style="color:#999;"></small></td><td><code>2.0.2</code></td><td><code>2677</code></td><td><code>3</code></td><td><code>5</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>DHD</code> <code>OllamaResponse</code> <code>bootstrap_script_memory_on_import</code> <code>call_ollama</code> <code>call_ollama_chat</code> <code>comtrya</code> <code>create_model</code> <code>embed</code> <code>execute_ephemeral_tool</code> <code>get_comtrya</code> <code>get_iso_timestamp</code> <code>get_model</code> <code>get_version</code> <code>list_local_models</code> <code>list_running_models</code> <code>pull_model</code> <code>push_model</code> <code>record_telemetry</code> <code>show_model</code> <code>stream_ollama_chat</code> <code>terminus</code> </p>
+</div>
+<div id="shelf-04_Boilerplate" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">04_Boilerplate</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_dakara_superweapon.py</code><br><small style="color:#999;"></small></td><td><code>2.0.0</code></td><td><code>509</code></td><td><code>11</code></td><td><code>0</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>DHD</code> <code>compact_tracks</code> <code>comtrya</code> <code>get_iso_timestamp</code> <code>inject_into</code> <code>record_telemetry</code> <code>sync_template</code> <code>terminus</code> </p>
+</div>
+<div id="shelf-05_Registry" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">05_Registry</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_correlative_system_update.py</code><br><small style="color:#999;">V:\__terminus__\05_Registry\correlative_system_update.py</small></td><td><code>2.0.0</code></td><td><code>393</code></td><td><code>11</code></td><td><code>0</code></td><td>—</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>PING_DIR</code> <code>TERMINUS_ANCHOR</code> <code>TERMINUS_DIR</code> <code>YOU_ARE_HERE_FILE</code> <code>clear_registry</code> <code>get_all_modules</code> <code>get_module</code> <code>get_registry_status</code> <code>refresh_from_cache</code> </p>
+</div>
+<div id="shelf-06_Documentation" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">06_Documentation</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_aoit.py</code><br><small style="color:#999;"></small></td><td><code>1.0.0</code></td><td><code>567</code></td><td><code>17</code></td><td><code>0</code></td><td>yes</td></tr>
+<tr><td><code>__ssot_mission_report.py</code><br><small style="color:#999;"></small></td><td><code>2.0.0</code></td><td><code>244</code></td><td><code>3</code></td><td><code>1</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>DiagramCache</code> <code>MERMAID_VERSION</code> <code>MissionReport</code> <code>create_mission_report</code> <code>discover_ssot_diagrams</code> <code>generate_architecture_diagram</code> <code>generate_sequence_diagram</code> <code>generate_terminus_html</code> <code>get_mission_report_status</code> <code>render_all_mermaid_files</code> <code>render_all_mermaid_files_async</code> <code>render_mermaid_to_png</code> </p>
+</div>
+<div id="shelf-07_Memory" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">07_Memory</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_the_link.py</code><br><small style="color:#999;"></small></td><td><code>2.0.0</code></td><td><code>532</code></td><td><code>13</code></td><td><code>0</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>bootstrap_script_memory_on_import</code> <code>push_recent_exchange</code> <code>recall_last_script_memory</code> <code>record_script_memory</code> </p>
+</div>
+<div id="shelf-08_Versions" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">08_Versions</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_quantum_mirror.py</code><br><small style="color:#999;">__ssot_quantum_mirror.py — The Quantum Mirror SSOT</small></td><td><code>2.0.2</code></td><td><code>423</code></td><td><code>14</code></td><td><code>0</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>DHD</code> <code>deduplicate_versions</code> <code>get_version</code> <code>promote_version</code> <code>record_telemetry</code> <code>scan_directory_for_registry</code> <code>terminus</code> <code>version_exists</code> </p>
+</div>
+<div id="shelf-09.75_Platform" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">09.75_Platform</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_transportation_rings.py</code><br><small style="color:#999;">===============================================================================</small></td><td><code>—</code></td><td><code>152</code></td><td><code>1</code></td><td><code>0</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>deploy_platform_proxy</code> <code>deploy_platform_to</code> <code>dial</code> <code>get_station</code> <code>get_station_info</code> <code>list_registered_workspaces</code> <code>list_stations</code> <code>load_sync_registry</code> <code>run_interactive_wizard</code> <code>run_workspace_alt_sync</code> <code>run_workspace_cli</code> <code>save_sync_registry</code> <code>scan_neighborhood</code> <code>sync_all_workspaces</code> <code>sync_workspace</code> </p>
+</div>
+<div id="shelf-10_Cooldown" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">10_Cooldown</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_GCD.py</code><br><small style="color:#999;">V:\__terminus__\10_Cooldown\__ssot_GCD.py</small></td><td><code>2.0.7</code></td><td><code>249</code></td><td><code>8</code></td><td><code>0</code></td><td>—</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>check_cooldown</code> <code>record_cooldown</code> <code>should_run_script</code> <code>update_script_run</code> </p>
+</div>
+<div id="shelf-11_Blacklist" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">11_Blacklist</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_ostracization.py</code><br><small style="color:#999;">__ssot_ostracization.py — The Ostracization SSOT (Blacklist &amp; Exclusion Architecture)</small></td><td><code>2.0.0</code></td><td><code>293</code></td><td><code>7</code></td><td><code>0</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>get_blacklist</code> <code>get_iso_timestamp</code> <code>is_ostracized</code> <code>ostracize</code> <code>record_telemetry</code> <code>seed_workspace</code> <code>sync_exclusions</code> <code>terminus</code> </p>
+</div>
+<div id="shelf-12_Toolchain" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">12_Toolchain</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_toolchain.py</code><br><small style="color:#999;">V:\__terminus__\12_Toolchain\__ssot_toolchain.py</small></td><td><code>1.0.0-GENESIS</code></td><td><code>459</code></td><td><code>9</code></td><td><code>0</code></td><td>yes</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>GIT_ROOT</code> <code>LEGACY_C_LOCATIONS</code> <code>NODE_ROOT</code> <code>PACKAGES_ROOT</code> <code>QuarkIOBase</code> <code>SYSTEM_PYTHON_ROOT</code> <code>TOOLCHAIN_ROOT</code> <code>apply_cache_env</code> <code>get_iso_timestamp</code> <code>get_toolchain_manifest</code> <code>legacy_c_drive_usage</code> <code>record_telemetry</code> <code>resolve_tool</code> <code>terminus</code> <code>tool_version</code> <code>verify_toolchain</code> </p>
+</div>
+<div id="shelf-13_Secrets" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">13_Secrets</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_mary_lambert.py</code><br><small style="color:#999;">__ssot_mary_lambert.py — Secrets (Mary Lambert)</small></td><td><code>—</code></td><td><code>507</code></td><td><code>4</code></td><td><code>0</code></td><td>—</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>TERMINUS_ANCHOR</code> <code>TERMINUS_DIR</code> </p>
+</div>
+<div id="shelf-99_Aurora" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">OK</span><span class="endpoint-path">99_Aurora</span></div>
+<table class="param-table"><thead><tr><th>Module</th><th>Version</th><th>Lines</th><th>Functions</th><th>Classes</th><th>Contract</th></tr></thead><tbody>
+<tr><td><code>__ssot_letta.py</code><br><small style="color:#999;"></small></td><td><code>—</code></td><td><code>209</code></td><td><code>1</code></td><td><code>1</code></td><td>—</td></tr>
+</tbody></table>
+<h3 style="color:var(--color-primary,#00EA00);font-size:1em;">Live through _TERMINUS</h3>
+<p class="code-inline-wrap"><code>AURORA_AGENT_ID</code> <code>LettaBidirectionalSession</code> <code>record_telemetry</code> <code>run_letta_headless</code> </p>
+</div>
+<div id="hub-AUTOMATINUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">AUTOMATINUS</span></div>
+<p class="code-inline-wrap"><code>Action</code> <code>DHD</code> <code>Plan</code> <code>TERMINUS</code> <code>call_ollama</code> <code>canonicalize_package</code> <code>create_empty_registry</code> <code>ensure_parent_gitignore</code> <code>execute_plan</code> <code>extension_id</code> <code>fill_template</code> <code>find_available_backups</code> <code>format_location_path</code> <code>generate_license</code> <code>get_pez</code> <code>get_pez_config</code> <code>is_gh_available</code> <code>is_git_available</code> <code>link_folder</code> <code>load_registry</code> <code>make_entry</code> <code>order_package</code> <code>plan_link</code> <code>proper_case</code> <code>read_template</code> <code>record_telemetry</code> <code>render_preview</code> <code>restore_from_backup</code> <code>run_bump</code> <code>run_doctor</code> <code>run_git_init</code> <code>run_identity_wizard</code> <code>run_morning_ritual_for</code> <code>run_provision_repos</code> <code>run_retroactive</code> <code>run_scan</code> <code>run_uninstall</code> <code>sanitize_name</code> <code>save_registry</code> <code>scaffold_extension</code> <code>stamp_files</code> <code>stringify_extensions</code> <code>upsert_extension_entry</code> </p>
+</div>
+<div id="hub-AVENTINUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">AVENTINUS</span></div>
+<p class="code-inline-wrap"><code>AVENTINUS_ANCHOR</code> <code>AVENTINUS_DIR</code> </p>
+</div>
+<div id="hub-CEREBRINUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">CEREBRINUS</span></div>
+<p class="code-inline-wrap"><code>CEREBRINUS_ANCHOR</code> <code>CEREBRINUS_DIR</code> </p>
+</div>
+<div id="hub-CONSERVATINUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">CONSERVATINUS</span></div>
+<p class="code-inline-wrap"><code>CONSERVATINUS_ANCHOR</code> <code>CONSERVATINUS_DIR</code> <code>alter</code> <code>check_readonly</code> <code>clone</code> <code>commit</code> <code>conspectus</code> <code>ego</code> <code>get_all_preserve_paths</code> <code>get_status</code> <code>git_er_done</code> <code>inject_all_preserve_paths</code> <code>inject_alter_paths</code> <code>inject_ego_paths</code> <code>list_repos</code> <code>pull</code> <code>push</code> <code>query_station</code> <code>rebuild_delegation_station</code> <code>sync_readonly</code> </p>
+</div>
+<div id="hub-FABULINUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">FABULINUS</span></div>
+<p class="code-inline-wrap"><code>FABULINUS_ANCHOR</code> <code>FABULINUS_DIR</code> </p>
+</div>
+<div id="hub-INUUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">INUUS</span></div>
+<p class="code-inline-wrap"><code>DHD</code> <code>TERMINUS_DIR</code> <code>fling_all_css</code> <code>get_brand_manifest</code> <code>get_module</code> <code>inject_aesthetics</code> <code>record_telemetry</code> </p>
+</div>
+<div id="hub-JOCINUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">JOCINUS</span></div>
+<p class="code-inline-wrap"><code>JOCINUS_ANCHOR</code> <code>JOCINUS_DIR</code> <code>get_pokemon_status</code> <code>gotta_catch_em_all</code> <code>start_menu</code> </p>
+</div>
+<div id="hub-QUIRINUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">QUIRINUS</span></div>
+<p class="code-inline-wrap"><code>QUIRINUS_ANCHOR</code> <code>QUIRINUS_DIR</code> </p>
+</div>
+<div id="hub-SENTINUS" class="doc-stage">
+<div class="endpoint-header"><span class="method-badge get">LOADED</span><span class="endpoint-path">SENTINUS</span></div>
+<p class="code-inline-wrap"><code>DHD</code> <code>SENTINUS_ANCHOR</code> <code>SENTINUS_DIR</code> <code>_HAS_HOOKS</code> <code>_HAS_SELF_ACTUALIZATION</code> <code>fold_memory</code> <code>fold_recall_stream</code> <code>get_accordian_metrics</code> <code>get_cognition_status</code> <code>get_module</code> <code>get_morning_ritual_status</code> <code>get_physiological_status</code> <code>get_relational_status</code> <code>get_safety_status</code> <code>get_self_actualization_status</code> <code>get_sentinus_status</code> <code>record_telemetry</code> <code>run_morning_ritual_for</code> <code>unfold_memory</code> </p>
+</div>
+</div>
+</div>
+<div class="pageFooter">
+<span>Generated from the running substrate. <a href="index.html">Docs home</a> · <a href="../../index.html">Homepage</a></span>
+</div>
+</div>
+<script>
+function loadDoc(docId) {
+    document.querySelectorAll('.doc-stage').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.endpoint-btn').forEach(b => b.classList.remove('active'));
+    const target = document.getElementById(docId);
+    if (target) target.classList.add('active');
+    if (event && event.currentTarget) event.currentTarget.classList.add('active');
+}
+</script>
+</body>
+</html>

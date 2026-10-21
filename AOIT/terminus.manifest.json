@@ -1,0 +1,3488 @@
+{
+  "generated": "2026-10-21 12:49:38Z",
+  "generator": {
+    "name": "aoit",
+    "version": "1.0.0"
+  },
+  "terminus_dir": "V:\\__terminus__",
+  "terminus_version": "2.0.1",
+  "live_ok": true,
+  "counts": {
+    "total": 238,
+    "callable": 163,
+    "class": 15,
+    "none": 2,
+    "missing": 0,
+    "module": 24,
+    "value": 34
+  },
+  "shelves": {
+    "00_Command": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_stargate_command.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": "2.0.0",
+          "all": null,
+          "functions": [
+            "_daisy_chain_import",
+            "_daisy_chain_import",
+            "main"
+          ],
+          "classes": [
+            "StargateCommand"
+          ],
+          "constants": {
+            "__version__": "2.0.0"
+          },
+          "imports": [
+            "__ssot_zero_point_module",
+            "argparse",
+            "fnmatch",
+            "importlib",
+            "io",
+            "json",
+            "manual_dial",
+            "os",
+            "pathlib",
+            "platform",
+            "py_compile",
+            "random",
+            "re",
+            "socket",
+            "subprocess",
+            "sys",
+            "tempfile",
+            "time",
+            "traceback",
+            "typing"
+          ],
+          "has_contract": false,
+          "lines": 1246
+        }
+      ]
+    },
+    "01_Path": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_dial_home_device.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": "2.0.0",
+          "all": null,
+          "functions": [
+            "_daisy_chain_import",
+            "_module_is_initializing",
+            "_load_standards_dependency",
+            "_bind_standards_from_dhd"
+          ],
+          "classes": [
+            "DialHomeDevice",
+            "StellarDriftCalculator"
+          ],
+          "constants": {
+            "__version__": "2.0.0"
+          },
+          "imports": [
+            "datetime",
+            "importlib",
+            "json",
+            "manual_dial",
+            "pathlib",
+            "point_of_origin",
+            "subspace_link",
+            "sys"
+          ],
+          "has_contract": true,
+          "lines": 475
+        }
+      ]
+    },
+    "02_Import": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_zero_point_module.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": "2.0.0",
+          "all": [
+            "DHD",
+            "terminus",
+            "get_iso_timestamp",
+            "setup_viktor_logging",
+            "get_logger",
+            "record_telemetry",
+            "sign_guest_book",
+            "load_env_file",
+            "bootstrap_terminus",
+            "log_intuition_gap",
+            "Blackboard",
+            "anchor_state",
+            "retrieve_anchor",
+            "standard_argparse",
+            "get_system_stability",
+            "verify_output_integrity",
+            "fold_spacetime",
+            "scry_codex",
+            "OmegaUnifiedCore",
+            "OMEGA_Base",
+            "LocalCache",
+            "QuarkIOBase",
+            "QuarkIOResult",
+            "_core_core",
+            "_chronon_chronon",
+            "comtrya",
+            "get_comtrya",
+            "COMTRYA",
+            "get_ssot_standards",
+            "get_ssot_contract",
+            "write_contract_lock",
+            "check_contract_drift",
+            "query_telemetry",
+            "standards_health",
+            "push_recent_exchange",
+            "record_script_memory",
+            "recall_last_script_memory",
+            "script_memory_payload",
+            "SSOT_CONTRACT"
+          ],
+          "functions": [
+            "_daisy_chain_import",
+            "terminus",
+            "bootstrap_terminus",
+            "get_iso_timestamp",
+            "setup_viktor_logging",
+            "get_logger",
+            "_get_telemetry_db_path",
+            "_ensure_telemetry_table",
+            "_fetch_recent_telemetry_rows",
+            "record_telemetry",
+            "record_advanced_telemetry",
+            "sign_guest_book",
+            "load_env_file",
+            "log_intuition_gap",
+            "anchor_state",
+            "retrieve_anchor",
+            "get_pulse_interval",
+            "get_pulse_window",
+            "_core_core",
+            "_chronon_chronon",
+            "standard_argparse",
+            "get_system_stability",
+            "verify_output_integrity",
+            "fold_spacetime",
+            "scry_codex",
+            "_load_comtrya_standards",
+            "get_ssot_standards",
+            "_sha256_file",
+            "get_ssot_contract",
+            "write_contract_lock",
+            "check_contract_drift",
+            "query_telemetry",
+            "standards_health",
+            "initialize_zero_point"
+          ],
+          "classes": [
+            "Blackboard",
+            "CacheEntry",
+            "LocalCache",
+            "QuarkIOResult",
+            "QuarkIOBase"
+          ],
+          "constants": {
+            "__version__": "2.0.0"
+          },
+          "imports": [
+            "argparse",
+            "collections",
+            "dataclasses",
+            "datetime",
+            "hashlib",
+            "importlib",
+            "json",
+            "logging",
+            "manual_dial",
+            "os",
+            "pathlib",
+            "shutil",
+            "sqlite3",
+            "sys",
+            "time",
+            "traceback",
+            "types",
+            "typing"
+          ],
+          "has_contract": true,
+          "lines": 1008
+        }
+      ]
+    },
+    "03_Model": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_comtrya.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": "2.0.2",
+          "all": null,
+          "functions": [
+            "_daisy_chain_import",
+            "get_comtrya",
+            "_bind_standards_from_comtrya"
+          ],
+          "classes": [
+            "OllamaResponse",
+            "ViktorMode",
+            "ModelProfile",
+            "ResponseError",
+            "COMTRYA"
+          ],
+          "constants": {
+            "__version__": "2.0.2",
+            "CONNECTION_ERROR_MESSAGE": "Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download",
+            "_comtrya_singleton": null
+          },
+          "imports": [
+            "__ssot_dial_home_device",
+            "__ssot_zero_point_module",
+            "argparse",
+            "base64",
+            "contextlib",
+            "dataclasses",
+            "enum",
+            "hashlib",
+            "importlib",
+            "inspect",
+            "ipaddress",
+            "json",
+            "logging",
+            "manual_dial",
+            "os",
+            "pathlib",
+            "platform",
+            "random",
+            "re",
+            "requests",
+            "socket",
+            "sqlite3",
+            "subprocess",
+            "sys",
+            "time",
+            "typing",
+            "urllib"
+          ],
+          "has_contract": true,
+          "lines": 2677
+        }
+      ]
+    },
+    "04_Boilerplate": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_dakara_superweapon.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": "2.0.0",
+          "all": null,
+          "functions": [
+            "_daisy_chain_import",
+            "_load_capabilities",
+            "_resolve_variables",
+            "_clean_duplicate_markers",
+            "_load_manifest",
+            "_template_text",
+            "_iter_targets",
+            "inject_into",
+            "sync_template",
+            "compact_tracks",
+            "main"
+          ],
+          "classes": [],
+          "constants": {
+            "__version__": "2.0.0",
+            "JOEY": 119,
+            "_capabilities_cache": null
+          },
+          "imports": [
+            "__ssot_dial_home_device",
+            "__ssot_zero_point_module",
+            "argparse",
+            "datetime",
+            "importlib",
+            "json",
+            "manual_dial",
+            "os",
+            "pathlib",
+            "platform",
+            "random",
+            "re",
+            "socket",
+            "subprocess",
+            "sys",
+            "time",
+            "typing"
+          ],
+          "has_contract": true,
+          "lines": 509
+        }
+      ]
+    },
+    "05_Registry": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_correlative_system_update.py",
+          "status": "ok",
+          "error": null,
+          "doc": "V:\\__terminus__\\05_Registry\\correlative_system_update.py",
+          "version": "2.0.0",
+          "all": [
+            "get_module",
+            "get_all_modules",
+            "get_registry_status",
+            "clear_registry",
+            "refresh_from_cache",
+            "TERMINUS_ANCHOR",
+            "TERMINUS_DIR",
+            "PING_DIR",
+            "YOU_ARE_HERE_FILE"
+          ],
+          "functions": [
+            "_daisy_chain_import",
+            "_find_terminus_root",
+            "_load_persistent_cache",
+            "_save_persistent_cache",
+            "_auto_register_caller",
+            "get_module",
+            "_load_module_from_path",
+            "get_all_modules",
+            "get_registry_status",
+            "clear_registry",
+            "refresh_from_cache"
+          ],
+          "classes": [],
+          "constants": {
+            "__version__": "2.0.0"
+          },
+          "imports": [
+            "importlib",
+            "json",
+            "pathlib",
+            "sys",
+            "typing"
+          ],
+          "has_contract": false,
+          "lines": 393
+        }
+      ]
+    },
+    "06_Documentation": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_aoit.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": "1.0.0",
+          "all": null,
+          "functions": [
+            "_terminus_dir",
+            "_is_shelf",
+            "_shelves",
+            "_literal_list",
+            "_import_names",
+            "_parse_module",
+            "_collect_static",
+            "_run_live_probe",
+            "_owned_by_module",
+            "_badge",
+            "_write_shelf_page",
+            "_write_tombstone",
+            "_write_hub_page",
+            "_write_index",
+            "_load_previous_index",
+            "generate",
+            "get_aoit_status"
+          ],
+          "classes": [],
+          "constants": {
+            "__version__": "1.0.0",
+            "SHELF_PREFIX_DIGITS": "0123456789",
+            "OUTPUT_DIRNAME": "AOIT",
+            "PROBE_TIMEOUT_SECONDS": 180,
+            "INDEX_FILE": "_shelf_index.json"
+          },
+          "imports": [
+            "argparse",
+            "ast",
+            "datetime",
+            "json",
+            "pathlib",
+            "subprocess",
+            "sys"
+          ],
+          "has_contract": true,
+          "lines": 567
+        },
+        {
+          "file": "__ssot_mission_report.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": "2.0.0",
+          "all": [
+            "MissionReport",
+            "create_mission_report",
+            "get_mission_report_status",
+            "render_mermaid_to_png",
+            "render_all_mermaid_files",
+            "render_all_mermaid_files_async",
+            "generate_architecture_diagram",
+            "generate_sequence_diagram",
+            "discover_ssot_diagrams",
+            "generate_terminus_html",
+            "DiagramCache",
+            "MERMAID_VERSION",
+            "SSOT_CONTRACT",
+            "fluff_markdown",
+            "mdfluffer_process_file"
+          ],
+          "functions": [
+            "_daisy_chain_import",
+            "create_mission_report",
+            "get_mission_report_status"
+          ],
+          "classes": [
+            "MissionReport"
+          ],
+          "constants": {
+            "__version__": "2.0.0",
+            "MD_FLUFFER_AVAILABLE": false,
+            "fluff_markdown": null,
+            "mdfluffer_process_file": null
+          },
+          "imports": [
+            "datetime",
+            "importlib",
+            "pathlib",
+            "sys",
+            "typing"
+          ],
+          "has_contract": true,
+          "lines": 244
+        }
+      ]
+    },
+    "07_Memory": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_the_link.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": "2.0.0",
+          "all": [
+            "record_script_memory",
+            "recall_last_script_memory",
+            "bootstrap_script_memory_on_import",
+            "push_recent_exchange",
+            "SSOT_CONTRACT"
+          ],
+          "functions": [
+            "_daisy_chain_import",
+            "_find_terminus_root",
+            "resolve_active_agent",
+            "_dead_memory_root",
+            "dead_memory_db_path",
+            "_init_dead_memory_schema",
+            "_recent_context",
+            "push_recent_exchange",
+            "_caller_script",
+            "script_memory_payload",
+            "record_script_memory",
+            "recall_last_script_memory",
+            "bootstrap_script_memory_on_import"
+          ],
+          "classes": [],
+          "constants": {
+            "__version__": "2.0.0",
+            "DHD": null,
+            "terminus": null,
+            "record_telemetry": null,
+            "call_ollama": null,
+            "get_module": null,
+            "create_mission_report": null
+          },
+          "imports": [
+            "datetime",
+            "hashlib",
+            "importlib",
+            "inspect",
+            "json",
+            "pathlib",
+            "sqlite3",
+            "sys",
+            "threading",
+            "time",
+            "typing"
+          ],
+          "has_contract": true,
+          "lines": 532
+        }
+      ]
+    },
+    "08_Versions": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_quantum_mirror.py",
+          "status": "ok",
+          "error": null,
+          "doc": "__ssot_quantum_mirror.py — The Quantum Mirror SSOT",
+          "version": "2.0.2",
+          "all": null,
+          "functions": [
+            "_daisy_chain_import",
+            "_parse_drive_and_path",
+            "_get_registry_path",
+            "_read_registry",
+            "_write_registry",
+            "_extract_version_from_file",
+            "_sync_version_to_file",
+            "_cmp_versions",
+            "_deduplicate_version_lines",
+            "get_version",
+            "promote_version",
+            "deduplicate_versions",
+            "version_exists",
+            "scan_directory_for_registry"
+          ],
+          "classes": [],
+          "constants": {
+            "__version__": "2.0.2",
+            "DEFAULT_VERSION": "2.0.0"
+          },
+          "imports": [
+            "importlib",
+            "json",
+            "pathlib",
+            "re",
+            "sys",
+            "typing"
+          ],
+          "has_contract": true,
+          "lines": 423
+        }
+      ]
+    },
+    "09.75_Platform": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_transportation_rings.py",
+          "status": "ok",
+          "error": null,
+          "doc": "===============================================================================",
+          "version": null,
+          "all": [
+            "get_station_info",
+            "scan_neighborhood",
+            "dial",
+            "list_stations",
+            "get_station",
+            "deploy_platform_to",
+            "STATION_NAME",
+            "STATION_PATH",
+            "STATION_VERSION",
+            "sync_workspace",
+            "sync_all_workspaces",
+            "load_sync_registry",
+            "save_sync_registry",
+            "run_workspace_cli",
+            "run_workspace_alt_sync",
+            "run_interactive_wizard",
+            "list_registered_workspaces",
+            "deploy_platform_proxy",
+            "normalize_workspace_path",
+            "scaffold_alt_workspace",
+            "MASTER_GITHUB_DIR",
+            "MASTER_AGENTS_DIR",
+            "SSOT_CONTRACT"
+          ],
+          "functions": [
+            "_daisy_chain_import"
+          ],
+          "classes": [],
+          "constants": {},
+          "imports": [
+            "__future__",
+            "cross_workspace_sync",
+            "importlib",
+            "pathlib",
+            "sys",
+            "terminus_platform"
+          ],
+          "has_contract": true,
+          "lines": 152
+        }
+      ]
+    },
+    "10_Cooldown": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_GCD.py",
+          "status": "ok",
+          "error": null,
+          "doc": "V:\\__terminus__\\10_Cooldown\\__ssot_GCD.py",
+          "version": "2.0.7",
+          "all": null,
+          "functions": [
+            "_normalize_path",
+            "_load_registry",
+            "_save_registry",
+            "check_cooldown",
+            "record_cooldown",
+            "should_run_script",
+            "update_script_run",
+            "main"
+          ],
+          "classes": [],
+          "constants": {
+            "__version__": "2.0.7"
+          },
+          "imports": [
+            "argparse",
+            "json",
+            "pathlib",
+            "sys",
+            "time",
+            "typing"
+          ],
+          "has_contract": false,
+          "lines": 249
+        }
+      ]
+    },
+    "11_Blacklist": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_ostracization.py",
+          "status": "ok",
+          "error": null,
+          "doc": "__ssot_ostracization.py — The Ostracization SSOT (Blacklist & Exclusion Architecture)",
+          "version": "2.0.0",
+          "all": null,
+          "functions": [
+            "_daisy_chain_import",
+            "sync_exclusions",
+            "seed_workspace",
+            "create_backup",
+            "get_blacklist",
+            "is_ostracized",
+            "ostracize"
+          ],
+          "classes": [],
+          "constants": {
+            "__version__": "2.0.0"
+          },
+          "imports": [
+            "importlib",
+            "json",
+            "os",
+            "pathlib",
+            "re",
+            "sys",
+            "typing"
+          ],
+          "has_contract": true,
+          "lines": 293
+        }
+      ]
+    },
+    "12_Toolchain": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_toolchain.py",
+          "status": "ok",
+          "error": null,
+          "doc": "V:\\__terminus__\\12_Toolchain\\__ssot_toolchain.py",
+          "version": "1.0.0-GENESIS",
+          "all": null,
+          "functions": [
+            "_daisy_chain_import",
+            "_ensure_support_on_path",
+            "resolve_tool",
+            "tool_version",
+            "get_toolchain_manifest",
+            "verify_toolchain",
+            "apply_cache_env",
+            "legacy_c_drive_usage",
+            "_quark_dir_size"
+          ],
+          "classes": [],
+          "constants": {
+            "__version__": "1.0.0-GENESIS"
+          },
+          "imports": [
+            "importlib",
+            "os",
+            "pathlib",
+            "shutil",
+            "subprocess",
+            "sys",
+            "typing"
+          ],
+          "has_contract": true,
+          "lines": 459
+        }
+      ]
+    },
+    "13_Secrets": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_mary_lambert.py",
+          "status": "ok",
+          "error": null,
+          "doc": "__ssot_mary_lambert.py — Secrets (Mary Lambert)",
+          "version": null,
+          "all": null,
+          "functions": [
+            "_discover_terminus",
+            "colour",
+            "_rainbow_letters",
+            "main"
+          ],
+          "classes": [],
+          "constants": {
+            "_ESC": "\u001b",
+            "RAINBOW_LINE": "𝐼 𝒸𝒶𝓃'𝓉 𝓉𝒽𝒾𝓃𝓀 𝓈𝓉𝓇𝒶𝒾𝑔𝒽𝓉, 𝐼'𝓂 𝓈𝑜 𝑔𝒶𝓎",
+            "_TITLE_INNER_W": 20
+          },
+          "imports": [
+            "__future__",
+            "pathlib",
+            "sys",
+            "time"
+          ],
+          "has_contract": false,
+          "lines": 507
+        }
+      ]
+    },
+    "99_Aurora": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_letta.py",
+          "status": "ok",
+          "error": null,
+          "doc": "",
+          "version": null,
+          "all": null,
+          "functions": [
+            "run_letta_headless"
+          ],
+          "classes": [
+            "LettaBidirectionalSession"
+          ],
+          "constants": {
+            "AURORA_AGENT_ID": "agent-01ece799-369c-4528-a421-e1f5d1bf1b70"
+          },
+          "imports": [
+            "json",
+            "pathlib",
+            "subprocess",
+            "sys",
+            "typing"
+          ],
+          "has_contract": false,
+          "lines": 209
+        }
+      ]
+    }
+  },
+  "absent_shelves": [],
+  "hubs": {
+    "AUTOMATINUS": true,
+    "AVENTINUS": true,
+    "CEREBRINUS": true,
+    "CONSERVATINUS": true,
+    "FABULINUS": true,
+    "INUUS": true,
+    "JOCINUS": true,
+    "QUIRINUS": true,
+    "SENTINUS": true
+  },
+  "hub_exports": {
+    "AUTOMATINUS": [
+      "Action",
+      "DHD",
+      "Plan",
+      "TERMINUS",
+      "call_ollama",
+      "canonicalize_package",
+      "create_empty_registry",
+      "ensure_parent_gitignore",
+      "execute_plan",
+      "extension_id",
+      "fill_template",
+      "find_available_backups",
+      "format_location_path",
+      "generate_license",
+      "get_pez",
+      "get_pez_config",
+      "is_gh_available",
+      "is_git_available",
+      "link_folder",
+      "load_registry",
+      "make_entry",
+      "order_package",
+      "plan_link",
+      "proper_case",
+      "read_template",
+      "record_telemetry",
+      "render_preview",
+      "restore_from_backup",
+      "run_bump",
+      "run_doctor",
+      "run_git_init",
+      "run_identity_wizard",
+      "run_morning_ritual_for",
+      "run_provision_repos",
+      "run_retroactive",
+      "run_scan",
+      "run_uninstall",
+      "sanitize_name",
+      "save_registry",
+      "scaffold_extension",
+      "stamp_files",
+      "stringify_extensions",
+      "upsert_extension_entry"
+    ],
+    "AVENTINUS": [
+      "AVENTINUS_ANCHOR",
+      "AVENTINUS_DIR"
+    ],
+    "CEREBRINUS": [
+      "CEREBRINUS_ANCHOR",
+      "CEREBRINUS_DIR"
+    ],
+    "CONSERVATINUS": [
+      "CONSERVATINUS_ANCHOR",
+      "CONSERVATINUS_DIR",
+      "alter",
+      "check_readonly",
+      "clone",
+      "commit",
+      "conspectus",
+      "ego",
+      "get_all_preserve_paths",
+      "get_status",
+      "git_er_done",
+      "inject_all_preserve_paths",
+      "inject_alter_paths",
+      "inject_ego_paths",
+      "list_repos",
+      "pull",
+      "push",
+      "query_station",
+      "rebuild_delegation_station",
+      "sync_readonly"
+    ],
+    "FABULINUS": [
+      "FABULINUS_ANCHOR",
+      "FABULINUS_DIR"
+    ],
+    "INUUS": [
+      "DHD",
+      "TERMINUS_DIR",
+      "fling_all_css",
+      "get_brand_manifest",
+      "get_module",
+      "inject_aesthetics",
+      "record_telemetry"
+    ],
+    "JOCINUS": [
+      "JOCINUS_ANCHOR",
+      "JOCINUS_DIR",
+      "get_pokemon_status",
+      "gotta_catch_em_all",
+      "start_menu"
+    ],
+    "QUIRINUS": [
+      "QUIRINUS_ANCHOR",
+      "QUIRINUS_DIR"
+    ],
+    "SENTINUS": [
+      "DHD",
+      "SENTINUS_ANCHOR",
+      "SENTINUS_DIR",
+      "_HAS_HOOKS",
+      "_HAS_SELF_ACTUALIZATION",
+      "fold_memory",
+      "fold_recall_stream",
+      "get_accordian_metrics",
+      "get_cognition_status",
+      "get_module",
+      "get_morning_ritual_status",
+      "get_physiological_status",
+      "get_relational_status",
+      "get_safety_status",
+      "get_self_actualization_status",
+      "get_sentinus_status",
+      "record_telemetry",
+      "run_morning_ritual_for",
+      "unfold_memory"
+    ]
+  },
+  "exported": [
+    {
+      "name": "DHD",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dakara_superweapon"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_quantum_mirror"
+        },
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        },
+        {
+          "kind": "hub",
+          "module": "INUUS"
+        },
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "DialHomeDevice",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "VscodeResolverQuark",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "ROOT_DIR",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "TERMINUS_ANCHOR",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_mary_lambert"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "TERMINUS_DIR",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_mary_lambert"
+        },
+        {
+          "kind": "hub",
+          "module": "INUUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "terminus",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dakara_superweapon"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_quantum_mirror"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_ostracization"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "record_telemetry",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dakara_superweapon"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_quantum_mirror"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_ostracization"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_letta"
+        },
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        },
+        {
+          "kind": "hub",
+          "module": "INUUS"
+        },
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_iso_timestamp",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dakara_superweapon"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_ostracization"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "QuarkIOBase",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "QuarkIOResult",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "OmegaUnifiedCore",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "LocalCache",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "comtrya",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_dakara_superweapon"
+        }
+      ],
+      "status": "none"
+    },
+    {
+      "name": "get_ssot_standards",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_ssot_contract",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "write_contract_lock",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "standards_health",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "ComtryaClass",
+      "owners": [],
+      "status": "class"
+    },
+    {
+      "name": "OllamaResponse",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "get_comtrya",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_model",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "call_ollama",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        },
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "call_ollama_chat",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "stream_ollama_chat",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "embed",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "list_local_models",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "list_running_models",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "show_model",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "create_model",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "pull_model",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "push_model",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "execute_ephemeral_tool",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "sync_template",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_dakara_superweapon"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "inject_into",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_dakara_superweapon"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "compact_tracks",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_dakara_superweapon"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_module",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        },
+        {
+          "kind": "hub",
+          "module": "INUUS"
+        },
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_all_modules",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_registry_status",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "clear_registry",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "refresh_from_cache",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "PING_DIR",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "YOU_ARE_HERE_FILE",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_correlative_system_update"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "MissionReport",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "create_mission_report",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_mission_report_status",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "render_mermaid_to_png",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "render_all_mermaid_files",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "render_all_mermaid_files_async",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "discover_ssot_diagrams",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "generate_terminus_html",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "DiagramCache",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "MERMAID_VERSION",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "generate_architecture_diagram",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "generate_sequence_diagram",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_mission_report"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "record_script_memory",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_the_link"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "recall_last_script_memory",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_the_link"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "bootstrap_script_memory_on_import",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_dial_home_device"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_the_link"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "push_recent_exchange",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_zero_point_module"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_the_link"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "deploy_malp",
+      "owners": [],
+      "status": "callable"
+    },
+    {
+      "name": "deploy_integrity_malp",
+      "owners": [],
+      "status": "callable"
+    },
+    {
+      "name": "scan_file",
+      "owners": [],
+      "status": "callable"
+    },
+    {
+      "name": "IntegrityViolation",
+      "owners": [],
+      "status": "class"
+    },
+    {
+      "name": "StargateCommand",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_stargate_command"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "get_station_info",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "scan_neighborhood",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "dial",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "list_stations",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_station",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "deploy_platform_to",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "deploy_platform_proxy",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "sync_workspace",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "sync_all_workspaces",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "load_sync_registry",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "save_sync_registry",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_workspace_cli",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_workspace_alt_sync",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_interactive_wizard",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "list_registered_workspaces",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_transportation_rings"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_terminus_status",
+      "owners": [],
+      "status": "callable"
+    },
+    {
+      "name": "GLOBAL_SITES",
+      "owners": [],
+      "status": "value"
+    },
+    {
+      "name": "BOOTSTRAP_ANCHORS",
+      "owners": [],
+      "status": "value"
+    },
+    {
+      "name": "SYNAPTOGENESIS_ROOT",
+      "owners": [],
+      "status": "value"
+    },
+    {
+      "name": "HOOKS_CACHE_ROOT",
+      "owners": [],
+      "status": "value"
+    },
+    {
+      "name": "get_hooks_cache_dir",
+      "owners": [],
+      "status": "callable"
+    },
+    {
+      "name": "get_telemetry_db_path",
+      "owners": [],
+      "status": "callable"
+    },
+    {
+      "name": "get_version",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_comtrya"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_quantum_mirror"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "promote_version",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_quantum_mirror"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "deduplicate_versions",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_quantum_mirror"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "version_exists",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_quantum_mirror"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "scan_directory_for_registry",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_quantum_mirror"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "check_cooldown",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_GCD"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "record_cooldown",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_GCD"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "should_run_script",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_GCD"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "update_script_run",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_GCD"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "ostracize",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_ostracization"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "is_ostracized",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_ostracization"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_blacklist",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_ostracization"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "sync_exclusions",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_ostracization"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "seed_workspace",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_ostracization"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "resolve_tool",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "tool_version",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_toolchain_manifest",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "verify_toolchain",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "apply_cache_env",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "legacy_c_drive_usage",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "TOOLCHAIN_ROOT",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "PACKAGES_ROOT",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "NODE_ROOT",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "SYSTEM_PYTHON_ROOT",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "GIT_ROOT",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "LEGACY_C_LOCATIONS",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_toolchain"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "run_letta_headless",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_letta"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "LettaBidirectionalSession",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_letta"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "AURORA_AGENT_ID",
+      "owners": [
+        {
+          "kind": "ssot",
+          "module": "__ssot_letta"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "AUTOMATINUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "automatinus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "get_pez",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_pez_config",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "scaffold_extension",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "link_folder",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_doctor",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_scan",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_retroactive",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_provision_repos",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_bump",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_git_init",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_uninstall",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_identity_wizard",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "sanitize_name",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "proper_case",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "extension_id",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "canonicalize_package",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "order_package",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "Plan",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "Action",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "class"
+    },
+    {
+      "name": "render_preview",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "execute_plan",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "plan_link",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "generate_license",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "fill_template",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "read_template",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "make_entry",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "upsert_extension_entry",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "format_location_path",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "stringify_extensions",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "load_registry",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "save_registry",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "create_empty_registry",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "is_git_available",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "is_gh_available",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "ensure_parent_gitignore",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "stamp_files",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "find_available_backups",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "restore_from_backup",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "TERMINUS",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "module"
+    },
+    {
+      "name": "run_morning_ritual_for",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        },
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "AVENTINUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "aventinus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "AVENTINUS_ANCHOR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AVENTINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "AVENTINUS_DIR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AVENTINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "CEREBRINUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "cerebrinus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "CEREBRINUS_ANCHOR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CEREBRINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "CEREBRINUS_DIR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CEREBRINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "CONSERVATINUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "conservatinus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "CONSERVATINUS_ANCHOR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "CONSERVATINUS_DIR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "git_er_done",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "module"
+    },
+    {
+      "name": "ego",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "module"
+    },
+    {
+      "name": "alter",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "module"
+    },
+    {
+      "name": "get_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "clone",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "pull",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "commit",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "push",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "list_repos",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "sync_readonly",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "check_readonly",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "inject_ego_paths",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "inject_alter_paths",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "inject_all_preserve_paths",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_all_preserve_paths",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "conspectus",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "module"
+    },
+    {
+      "name": "rebuild_delegation_station",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "query_station",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "CONSERVATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "FABULINUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "fabulinus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "FABULINUS_ANCHOR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "FABULINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "FABULINUS_DIR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "FABULINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "INUUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "inuus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "JOCINUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "jocinus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "JOCINUS_ANCHOR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "JOCINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "JOCINUS_DIR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "JOCINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "start_menu",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "JOCINUS"
+        }
+      ],
+      "status": "module"
+    },
+    {
+      "name": "gotta_catch_em_all",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "JOCINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_pokemon_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "JOCINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "QUIRINUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "quirinus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "QUIRINUS_ANCHOR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "QUIRINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "QUIRINUS_DIR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "QUIRINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "SENTINUS",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "sentinus",
+      "owners": [],
+      "status": "module"
+    },
+    {
+      "name": "SENTINUS_ANCHOR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "SENTINUS_DIR",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "get_sentinus_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_morning_ritual_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "none"
+    },
+    {
+      "name": "get_physiological_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_cognition_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_relational_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_safety_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_self_actualization_status",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "_HAS_HOOKS",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "_HAS_SELF_ACTUALIZATION",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "value"
+    },
+    {
+      "name": "fold_memory",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "unfold_memory",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "fold_recall_stream",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_accordian_metrics",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_morning_ritual_for",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        },
+        {
+          "kind": "hub",
+          "module": "SENTINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "scaffold_extension",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "link_folder",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_doctor",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_scan",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_retroactive",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_provision_repos",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_bump",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_git_init",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_uninstall",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "run_identity_wizard",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_pez",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_pez_config",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "AUTOMATINUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "fling_all_css",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "INUUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "get_brand_manifest",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "INUUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "inject_aesthetics",
+      "owners": [
+        {
+          "kind": "hub",
+          "module": "INUUS"
+        }
+      ],
+      "status": "callable"
+    },
+    {
+      "name": "weave",
+      "owners": [],
+      "status": "callable"
+    }
+  ],
+  "collisions": [
+    {
+      "name": "DHD",
+      "hubs": [
+        "AUTOMATINUS",
+        "INUUS",
+        "SENTINUS"
+      ],
+      "winner": "AUTOMATINUS"
+    },
+    {
+      "name": "record_telemetry",
+      "hubs": [
+        "AUTOMATINUS",
+        "INUUS",
+        "SENTINUS"
+      ],
+      "winner": "AUTOMATINUS"
+    },
+    {
+      "name": "get_module",
+      "hubs": [
+        "INUUS",
+        "SENTINUS"
+      ],
+      "winner": "INUUS"
+    },
+    {
+      "name": "run_morning_ritual_for",
+      "hubs": [
+        "AUTOMATINUS",
+        "SENTINUS"
+      ],
+      "winner": "AUTOMATINUS"
+    },
+    {
+      "name": "_DISCOVERED_SSOTS",
+      "hubs": [
+        "AVENTINUS",
+        "CEREBRINUS",
+        "CONSERVATINUS",
+        "FABULINUS",
+        "JOCINUS",
+        "QUIRINUS",
+        "SENTINUS"
+      ],
+      "winner": "AVENTINUS"
+    },
+    {
+      "name": "_SSOT_MODULES",
+      "hubs": [
+        "AVENTINUS",
+        "CEREBRINUS",
+        "CONSERVATINUS",
+        "FABULINUS",
+        "JOCINUS",
+        "QUIRINUS",
+        "SENTINUS"
+      ],
+      "winner": "AVENTINUS"
+    }
+  ],
+  "errors": []
+}
