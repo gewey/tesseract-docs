@@ -1,6 +1,6 @@
 # AOIT — API · SDK · LMNOP
 
-Generated 2026-10-21 12:49:38Z from `V:\__terminus__`.
+Generated 2026-10-21 14:24:54Z from `V:\__terminus__`.
 
 This is a report about a system, produced by executing it. Static facts come from `ast` parsing of every shelf; live facts come from a child process that imported `_TERMINUS`. Neither step can break the other.
 
@@ -28,7 +28,7 @@ This is a report about a system, produced by executing it. Static facts come fro
 
 ## Shelves
 
-15 shelf(s), 16 `__ssot_*.py` module(s). Each page is independent; deleting a folder tombstones only its page.
+16 shelf(s), 17 `__ssot_*.py` module(s). Each page is independent; deleting a folder tombstones only its page.
 
 | shelf | status | modules | page |
 |---|---|---|---|
@@ -46,6 +46,7 @@ This is a report about a system, produced by executing it. Static facts come fro
 | `11_Blacklist` | OK | 1 | [11_Blacklist](shelves/11_Blacklist.md) |
 | `12_Toolchain` | OK | 1 | [12_Toolchain](shelves/12_Toolchain.md) |
 | `13_Secrets` | OK | 1 | [13_Secrets](shelves/13_Secrets.md) |
+| `14_Saturday` | OK | 1 | [14_Saturday](shelves/14_Saturday.md) |
 | `99_Aurora` | OK | 1 | [99_Aurora](shelves/99_Aurora.md) |
 
 ## Sibling hubs

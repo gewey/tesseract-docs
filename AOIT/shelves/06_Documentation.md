@@ -1,6 +1,6 @@
 # 06_Documentation
 
-`OK` · generated 2026-10-21 12:49:38Z · 2 module(s)
+`OK` · generated 2026-10-21 14:24:54Z · 2 module(s)
 
 ## `__ssot_aoit.py`
 

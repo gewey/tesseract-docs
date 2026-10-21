@@ -1,10 +1,10 @@
-// Heads-ups only. Not tasks I took on. See AGENTS.md ethos: document what IS.
-- This checkout (__marinus__/01_Docs) is 1 commit behind origin/main.
-  tesseract_city/docs is a separate checkout of the same repo and is current.
-  Reconcile before committing, or the two index.html files stay different.
+// Heads-ups only. Not tasks I took on. Ethos: document what IS.
 - docs/index.html loads ../js/dynamichead.js, which resolves to tesseract_city/js/.
   That folder does not exist; ../../js/dynamichead.js is the path that resolves.
-- api_sdk_lmnop.html is generated and present but not yet linked from docs/index.html.
+- api_sdk_lmnop.html is linked from the docs nav ("Reference" section).
 - Two names in _TERMINUS.__all__ are currently unbound at runtime:
-  comtrya, get_morning_ritual_status. The page lists them as exports; it does not
-  call them out as broken. Not investigated further, per instruction.
+  comtrya, get_morning_ritual_status.
+- Publishing this module: commit + push it in __marinus__/01_Docs (repo
+  gewey/tesseract-docs), then in gewey.github.io run
+  `git submodule update --remote tesseract_city/docs` and commit the new pointer.
+  The site only serves the commit the parent repo points at.

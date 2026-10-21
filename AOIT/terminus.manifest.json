@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21 12:49:38Z",
+  "generated": "2026-10-21 14:24:54Z",
   "generator": {
     "name": "aoit",
     "version": "1.0.0"
@@ -800,6 +800,53 @@
         }
       ]
     },
+    "14_Saturday": {
+      "status": "ok",
+      "error": null,
+      "modules": [
+        {
+          "file": "__ssot_its_a_fixer_upper.py",
+          "status": "ok",
+          "error": null,
+          "doc": "__ssot_its_a_fixer_upper.py - Saturday the 14th",
+          "version": null,
+          "all": null,
+          "functions": [
+            "_is_scannable",
+            "_normalize",
+            "_looks_like_path",
+            "_scrub_password_value",
+            "_line_offsets",
+            "_line_number_at",
+            "_scan_file_for_secrets",
+            "_is_suspicious_path",
+            "_scan_file_for_file_targets",
+            "_scan",
+            "_build_leaderboard",
+            "_assemble",
+            "main"
+          ],
+          "classes": [],
+          "constants": {
+            "_terminus_dir": null,
+            "LEADERBOARD_HITS": 1
+          },
+          "imports": [
+            "__future__",
+            "datetime",
+            "json",
+            "os",
+            "pathlib",
+            "re",
+            "sys",
+            "time",
+            "typing"
+          ],
+          "has_contract": false,
+          "lines": 662
+        }
+      ]
+    },
     "99_Aurora": {
       "status": "ok",
       "error": null,
@@ -1050,6 +1097,10 @@
         {
           "kind": "ssot",
           "module": "__ssot_mary_lambert"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_its_a_fixer_upper"
         }
       ],
       "status": "value"
@@ -1068,6 +1119,10 @@
         {
           "kind": "ssot",
           "module": "__ssot_mary_lambert"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_its_a_fixer_upper"
         },
         {
           "kind": "hub",

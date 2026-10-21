@@ -1,7 +1,7 @@
 {
   "ok": true,
   "error": null,
-  "import_noise": "2026-10-21 08:49:38,859 - DHD - WARNING - [DHD] Unknown galactic anchor 'STRING' (normalized: 'STRING'). Falling back to POINT_OF_ORIGIN (V:\\).\n",
+  "import_noise": "2026-10-21 10:24:55,840 - DHD - WARNING - [DHD] Unknown galactic anchor 'STRING' (normalized: 'STRING'). Falling back to POINT_OF_ORIGIN (V:\\).\n",
   "terminus_version": "2.0.1",
   "runtime_all_count": 238,
   "counts": {
@@ -96,6 +96,10 @@
         {
           "kind": "ssot",
           "module": "__ssot_mary_lambert"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_its_a_fixer_upper"
         }
       ],
       "status": "value"
@@ -114,6 +118,10 @@
         {
           "kind": "ssot",
           "module": "__ssot_mary_lambert"
+        },
+        {
+          "kind": "ssot",
+          "module": "__ssot_its_a_fixer_upper"
         },
         {
           "kind": "hub",
@@ -2486,6 +2494,7 @@
     "__ssot_correlative_system_update",
     "__ssot_dakara_superweapon",
     "__ssot_dial_home_device",
+    "__ssot_its_a_fixer_upper",
     "__ssot_letta",
     "__ssot_mary_lambert",
     "__ssot_mission_report",
@@ -2513,6 +2522,7 @@
     "__ssot_ostracization",
     "__ssot_toolchain",
     "__ssot_mary_lambert",
+    "__ssot_its_a_fixer_upper",
     "__ssot_letta"
   ],
   "collisions": [
