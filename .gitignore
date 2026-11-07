@@ -3,3 +3,20 @@ state/
 __pycache__/
 *.tmp
 .DS_Store
+# --- citizenry junction aliases -> _Joey cubby (Tezzeret 2026-11-04) ---
+**/__cerebrinus__/citizenry/_Admin/
+**/__cerebrinus__/citizenry/_Gewey/
+**/__cerebrinus__/citizenry/_Joe/
+**/__cerebrinus__/citizenry/_Omega_Joey/
+**/__cerebrinus__/citizenry/_Joseph/
+**/__cerebrinus__/citizenry/_User/
+# --- citizenry junction aliases -> _Joey/_Tandumonium cubbies (Tezzeret 2026-11-04) ---
+**/__cerebrinus__/citizenry/_Admin/
+**/__cerebrinus__/citizenry/_Gewey/
+**/__cerebrinus__/citizenry/_Joe/
+**/__cerebrinus__/citizenry/_Omega_Joey/
+**/__cerebrinus__/citizenry/_Joseph/
+**/__cerebrinus__/citizenry/_User/
+**/__cerebrinus__/citizenry/_Joseph_Goulette/
+**/__cerebrinus__/citizenry/_Tandumonium_Dorian/
+**/__cerebrinus__/citizenry/_Tandumonium_Faust/
